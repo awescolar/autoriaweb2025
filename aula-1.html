@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 1: Introdução – Autoria Web</title>
+    <!-- Tailwind + daisyUI via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            plugins: [daisyui],
+            daisyui: { themes: ["light"] }
+        };
+    </script>
+    <!-- Prism CSS (tema “Tomorrow Night”) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+
+</head>
+
+<body class="min-h-screen bg-base-200 text-base-content">
+    <!-- Prism Core + Autoloader para CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+    <!-- HEADER -->
+    <header class="border-b bg-white">
+        <div class="mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between px-6 py-3">
+            <h1 class="text-[15px] font-semibold whitespace-nowrap">
+                Informática para Internet · Autoria Web
+            </h1>
+            <nav class="flex space-x-2 text-[11px] font-medium text-gray-500 mt-1 sm:mt-0">
+                <span>HTML</span><span>/</span>
+                <a href="/">CSS</a><span>/</span>
+                <span>Java Script</span>
+            </nav>
+        </div>
+    </header>
+
+    <div class="flex">
+
+        <!-- ROTATED STRIP -->
+        <aside class="hidden lg:flex flex-col justify-center items-center w-12 border-r bg-slate-50">
+            <span class="text-[11px] tracking-widest uppercase text-gray-500"
+                style="writing-mode: vertical-rl; transform: rotate(180deg);">
+                Hosted by GitHub / Informática para Internet / Autoria Web
+            </span>
+        </aside>
+
+        <!-- SIDEBAR -->
+        <aside class="bg-slate-50 w-full lg:w-72 border-r">
+            <div class="px-6 pt-10 pb-16 flex flex-col items-center">
+                <div class="card w-full max-w-xs">
+                    <figure class="px-6 pt-6">
+                        <img src="https://picsum.photos/400/400?random=2" alt="CSS 1: Introdução" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title text-lg mt-4 font-semibold">CSS 1: Introdução</h2>
+                        <p class="text-[13px] text-left mt-4 text-gray-600">
+                            Nesta aula conhecemos o básico de CSS, como funciona as regras do CSS para formatar um HTML,
+                            como aplicar a forma incorporada e vimos sobre cores e box-model.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="min-h-screen px-8">
+            <article class="bg-white rounded-lg p-8 max-w-3xl mx-auto space-y-6">
+
+                <!-- Header da aula -->
+                <div class="flex">
+                    <div>
+                        <time class="block text-xs text-gray-500">Junho 23, 2025</time>
+                        <h3 class="mt-1 text-2xl font-semibold">CSS 1: Introdução</h3>
+                    </div>
+                </div>
+                <hr />
+
+                <!-- 1. Sintaxe Básica -->
+                <div class="space-y-2">
+                    <h4 class="text-lg text-slate-800 uppercase font-semibold border-t-2 border-slate-800 bg-slate-50 p-3">1. Sintaxe Básica</h4>
+                    <p class="mb-4 text-gray-700">
+                        Em CSS, cada regra (rule set) segue este formato fundamental:
+                    </p>
+                    <pre><code class="language-css bg-slate-950">seletor { propriedade: valor; }</code></pre>
+
+                    <ul class="list-disc list-inside space-y-2 mb-4 text-gray-700">
+                        <li><span class="font-semibold">Seletor</span>: indica quais elementos recebem o estilo (por ex.
+                            <code class="bg-gray-100 px-1 rounded font-mono text-sm">h1</code>, <code
+                                class="bg-gray-100 px-1 rounded font-mono text-sm">.classe</code>, <code
+                                class="bg-gray-100 px-1 rounded font-mono text-sm">#id</code>).
+                        </li>
+                        <li><span class="font-semibold">Declaração</span>: o bloco entre chaves <code
+                                class="bg-gray-100 px-1 rounded font-mono text-sm">{ … }</code> que agrupa propriedades.
+                        </li>
+                        <li><span class="font-semibold">Propriedade</span>: o nome da característica que queremos
+                            ajustar (por ex. <code class="bg-gray-100 px-1 rounded font-mono text-sm">color</code>).
+                        </li>
+                        <li><span class="font-semibold">Valor</span>: o valor atribuído à propriedade (por ex. <code
+                                class="bg-gray-100 px-1 rounded font-mono text-sm">red</code>, <code
+                                class="bg-gray-100 px-1 rounded font-mono text-sm">16px</code>).</li>
+                    </ul>
+
+                    <p class="text-gray-600">
+                        <strong>Exemplo prático:</strong><br>
+                        Definindo cor vermelha e fonte de 24px para todos os títulos <code
+                            class="bg-gray-100 px-1 rounded font-mono text-sm">h1</code>:
+                    </p>
+
+                    <pre><code class="language-css bg-slate-950">h1 {
+  color: red;
+  font-size: 45px;
+  margin: 5px 0 20px 5px;
+}</code></pre>
+
+
+                </div>
+
+                <!-- 2. Seletores Agrupados -->
+                <div class="space-y-2 pt-6">
+                    <h4 class="text-lg text-slate-800 uppercase font-semibold border-t-2 border-slate-800 bg-slate-50 p-3">2. Seletores Agrupados</h4>
+                    <p class="mb-4 text-gray-700">
+                        Seletores agrupados permitem aplicar a mesma regra de estilo a vários elementos de uma vez.
+                        Basta listar cada seletor separado por vírgula.
+                    </p>
+                    <p>Use vírgulas para aplicar um mesmo estilo a vários elementos:</p>
+                    <ul class="list-disc list-inside space-y-2 mb-4 text-gray-700">
+                        <li><span class="font-semibold">h1</span>, <span class="font-semibold">h2</span> e <span
+                                class="font-semibold">p</span> recebem a mesma cor e tamanho de fonte.</li>
+                        <li>Você pode agrupar <code
+                                class="bg-gray-100 px-1 rounded font-mono text-sm">.classe1, .classe2</code> ou qualquer
+                            combinação de seletores.</li>
+                        <li>Use agrupamento para reduzir código repetido e manter seu CSS mais limpo.</li>
+                    </ul>
+                    <p class="text-gray-600">
+                        Experimente agrupar diferentes seletores e observar como todos eles são afetados pela mesma
+                        regra.
+                    </p>
+                    <pre><code class="language-css bg-slate-950">h1, h2, p {
+  color: teal;
+  font-family: Arial, sans-serif;
+}</code></pre>
+
+                </div>
+
+                <!-- 3. Box Model -->
+                <div class="space-y-2">
+                    <h4 class="text-lg text-slate-800 uppercase font-semibold border-t-2 border-slate-800 bg-slate-50 p-3">3. Box Model</h4>
+                    <section>
+                        <p class="mb-8">
+                            Todo elemento HTML é uma “caixa” composta por quatro camadas:
+                        </p>
+                        <pre class="bg-gray-100 p-4 rounded mb-4 font-mono text-sm">
+┌───────────────────────┐
+│       margin          │ ← Espaço externo entre elementos
+│ ┌───────────────────┐ │
+│ │      border       │ ← Borda ao redor da caixa
+│ │ ┌───────────────┐ │ │
+│ │ │   padding     │ │ │ ← Espaço interno entre conteúdo e borda
+│ │ │ ┌───────────┐ │ │ │
+│ │ │ │ content   │ │ │ │ ← Texto, imagem, etc.
+│ │ │ └───────────┘ │ │ │
+│ │ └───────────────┘ │ │
+│ └───────────────────┘ │
+└───────────────────────┘
+  </pre>
+                        <ul class="list-disc list-inside space-y-2 mb-4 text-gray-700">
+                            <li><span class="font-semibold">Content:</span> área onde fica o texto ou imagem.</li>
+                            <li><span class="font-semibold">Padding:</span> afasta o conteúdo da borda.</li>
+                            <li><span class="font-semibold">Border:</span> linha ao redor do padding.</li>
+                            <li><span class="font-semibold">Margin:</span> afasta a borda de elementos vizinhos.</li>
+                        </ul>
+                        <p class="mb-2 text-gray-700"><strong>Exemplo de uso:</strong></p>
+                        <pre><code class="language-css bg-slate-950">
+.caixa {
+  /* Padding interno */
+  padding: 16px;
+  /* Borda ao redor */
+  border: 2px solid #333;
+  /* Margem externa */
+  margin: 24px;
+  /* Cor de fundo para visualizar */
+  background-color: #eef;
+}</code></pre>
+
+                        <p class="mt-8">
+                            Experimente alterar <code class="bg-gray-100 px-1 rounded font-mono text-sm">padding</code>,
+                            <code class="bg-gray-100 px-1 rounded font-mono text-sm">border</code> e
+                            <code class="bg-gray-100 px-1 rounded font-mono text-sm">margin</code> para ver como a caixa
+                            se comporta.
+                        </p>
+                    </section>
+
+                    <p><strong>Exemplo:</strong></p>
+                    <pre><code class="language-css bg-slate-950">
+                        
+p {
+  background-color: #eef;
+  padding: 20px;
+  border: 2px solid #333;
+  margin: 30px;
+}
+          </code></pre>
+                </div>
+
+                <!-- 4. Block vs Inline -->
+                <div class="space-y-2 pt-6">
+                    <h4 class="text-lg text-slate-800 uppercase font-semibold border-t-2 border-slate-800 bg-slate-50 p-3">4. Block vs Inline</h4>
+                    <p>
+                        <strong>Block:</strong> ocupa toda a largura e quebra linha antes e depois<br>
+                        <strong>Inline:</strong> ocupa só o espaço do conteúdo e não quebra linha
+                    </p>
+                    <pre>
+                            <code class="language-css bg-slate-950">
+p { display: block; background: #def; }
+a { display: inline; color: blue; }
+          </code></pre>
+                </div>
+
+                <!-- 5. Categorias de Valores -->
+                <div class="space-y-2 pt-6">
+                    <h4 class="text-lg text-slate-800 uppercase font-semibold border-t-2 border-slate-800 bg-slate-50 p-3">5. Categorias de Valores</h4>
+                    <section class="p-6 rounded-lg">
+                        <p class="mb-4 text-gray-700">
+                            Em CSS, cada “propriedade” (como cor, tamanho ou margem) precisa de um “valor”.
+                            Esses valores se enquadram em algumas categorias simples:
+                        </p>
+                        <ul class="list-disc list-inside space-y-3 mb-4 text-gray-700">
+                            <li>
+                                <span class="font-semibold">Palavra-chave (Keyword):</span>
+                                nomes pré-definidos, como <code
+                                    class="bg-gray-100 px-1 rounded font-mono text-sm">red</code>,
+                                <code class="bg-gray-100 px-1 rounded font-mono text-sm">bold</code> ou
+                                <code class="bg-gray-100 px-1 rounded font-mono text-sm">auto</code>.<br>
+                                <span class="italic">Exemplo:</span>
+                                <code class="bg-gray-100 px-1 rounded font-mono text-sm">display: block;</code>
+                            </li>
+                            <li>
+                                <span class="font-semibold">Comprimento (Length):</span>
+                                números acompanhados de unidade, como <code
+                                    class="bg-gray-100 px-1 rounded font-mono text-sm">px</code>,
+                                <code class="bg-gray-100 px-1 rounded font-mono text-sm">em</code> ou
+                                <code class="bg-gray-100 px-1 rounded font-mono text-sm">%</code>.<br>
+                                <span class="italic">Exemplo:</span>
+                                <code class="bg-gray-100 px-1 rounded font-mono text-sm">margin: 20px;</code>
+                            </li>
+                            <li>
+                                <span class="font-semibold">Cor (Color):</span>
+                                nome (<code class="bg-gray-100 px-1 rounded font-mono text-sm">blue</code>),
+                                hexadecimal (<code class="bg-gray-100 px-1 rounded font-mono text-sm">#00f</code>),
+                                RGB (<code class="bg-gray-100 px-1 rounded font-mono text-sm">rgb(0,0,255)</code>) ou
+                                HSL (<code
+                                    class="bg-gray-100 px-1 rounded font-mono text-sm">hsl(240,100%,50%)</code>).<br>
+                                <span class="italic">Exemplo:</span>
+                                <code
+                                    class="bg-gray-100 px-1 rounded font-mono text-sm">background-color: #ffc107;</code>
+                            </li>
+                            <li>
+                                <span class="font-semibold">String:</span>
+                                texto entre aspas, usado em propriedades como <code
+                                    class="bg-gray-100 px-1 rounded font-mono text-sm">font-family</code>.<br>
+                                <span class="italic">Exemplo:</span>
+                                <code
+                                    class="bg-gray-100 px-1 rounded font-mono text-sm">font-family: "Arial", sans-serif;</code>
+                            </li>
+                            <li>
+                                <span class="font-semibold">Função:</span>
+                                valores produzidos por funções que calculam cores, tamanhos etc.<br>
+                                <span class="italic">Exemplo:</span>
+                                <code
+                                    class="bg-gray-100 px-1 rounded font-mono text-sm">width: calc(100% - 20px);</code>
+                            </li>
+                        </ul>
+                        <p class="text-gray-600">
+                            Pense assim: cada propriedade espera um tipo certo de “resposta” — seja um nome, um número
+                            com medida,
+                            uma cor, um texto ou o resultado de uma função.
+                        </p>
+                    </section>
+
+
+                    <p><strong>Exemplo:</strong></p>
+                    <pre><code class="language-css bg-slate-950">
+h1 {
+  color: #333;
+  background-color: rgb(240,240,240);
+  font-family: "Courier New";
+  width: 80%;
+}
+          </code></pre>
+                </div>
+
+            </article>
+        </main>
+
+    </div>
+</body>
+
+</html>
