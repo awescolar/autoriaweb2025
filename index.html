@@ -3,117 +3,173 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Resumo da Aula – Introdução ao CSS</title>
+  <title>Resumo Prático de CSS</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       max-width: 800px;
       margin: 2rem auto;
-      line-height: 1.6;
       padding: 0 1rem;
       background: #f9f9f9;
+      line-height: 1.6;
     }
     h1, h2 {
       color: #333;
     }
-    code {
+    code, pre {
       background: #eef;
       padding: 2px 4px;
       border-radius: 4px;
       font-family: monospace;
     }
     ul {
-      margin: 0.5rem 0 1.5rem 1.5rem;
+      margin: 0.5rem 0 1rem 1.5rem;
     }
     .section {
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #666;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background: #efefef;
     }
   </style>
 </head>
 <body>
 
-  <h1>📖 Resumo da Aula – Introdução ao CSS</h1>
+  <h1>Resumo Prático de CSS</h1>
+  <p>Este guia reúne, de forma concisa e prática, os principais conceitos e propriedades de CSS vistos em aula. Use-o como referência rápida ao estilizar suas páginas.</p>
 
   <div class="section">
-    <h2>1. Revisão Rápida (HTML)</h2>
-    <p>Relembramos alguns elementos de HTML que já usamos antes:</p>
-    <code>&lt;img&gt;, &lt;table&gt;, &lt;tr&gt;, &lt;td&gt;, &lt;th&gt;, &lt;form&gt;, &lt;input&gt;, &lt;select&gt;, &lt;option&gt;</code>
-  </div>
-
-  <div class="section">
-    <h2>2. O que é CSS?</h2>
-    <p><strong>CSS</strong> (Cascading Style Sheets) é a linguagem de estilos responsável por definir a apresentação do HTML. Separa o conteúdo (HTML) do estilo (CSS), tornando o código mais organizado e reutilizável.</p>
-  </div>
-
-  <div class="section">
-    <h2>3. Sintaxe Básica</h2>
-    <p>Um conjunto de regras CSS (rule set) tem a forma:</p>
+    <h2>1. Sintaxe Básica</h2>
     <pre><code>seletor {
   propriedade: valor;
 }</code></pre>
-    <p>Exemplo:</p>
-    <pre><code>h1 {
-  color: red;
-  font-size: 45px;
-  margin: 5px 0 20px 5px;
+    <ul>
+      <li><strong>Seletor</strong>: elemento HTML, classe (<code>.classe</code>), ID (<code>#id</code>) ou agrupamento (<code>h1, p</code>).</li>
+      <li><strong>Declaração</strong>: bloco entre chaves.</li>
+      <li><strong>Propriedade</strong>: nome da característica (ex.: <code>color</code>).</li>
+      <li><strong>Valor</strong>: valor atribuído (ex.: <code>red</code>).</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>2. Seletores</h2>
+    <ul>
+      <li><strong>Elemento</strong>: <code>p { … }</code></li>
+      <li><strong>Classe</strong>: <code>.menu { … }</code></li>
+      <li><strong>ID</strong>: <code>#header { … }</code></li>
+      <li><strong>Agrupado</strong>: <code>h1, h2, h3 { … }</code></li>
+      <li><strong>Descendente</strong>: <code>nav ul { … }</code></li>
+      <li><strong>Filho direto</strong>: <code>ul > li { … }</code></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>3. Cores</h2>
+    <p><strong>Formatos de cor:</strong></p>
+    <ul>
+      <li>Palavra-chave: <code>red</code>, <code>blue</code></li>
+      <li>Hexadecimal: <code>#RRGGBB</code> (ex.: <code>#ff0000</code>)</li>
+      <li>RGB: <code>rgb(255, 0, 0)</code></li>
+      <li>HSL: <code>hsl(0, 100%, 50%)</code></li>
+    </ul>
+    <p><strong>Variáveis CSS:</strong></p>
+    <pre><code>:root {
+  --cor-primaria: #3498db;
+}
+h1 {
+  color: var(--cor-primaria);
 }</code></pre>
   </div>
 
   <div class="section">
-    <h2>4. Seletores Agrupados</h2>
-    <p>Para aplicar a mesma regra a vários elementos:</p>
-    <pre><code>h1, h2, p {
-  color: red;
-  font-size: 45px;
+    <h2>4. Fundo (Background)</h2>
+    <pre><code>body {
+  background-color: #f0f0f0;
+  background-image: url('fundo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }</code></pre>
   </div>
 
   <div class="section">
-    <h2>5. Modelo de Formatação (Box Model)</h2>
-    <p>Cada elemento é uma “caixa” composta por:</p>
+    <h2>5. Bordas (Border)</h2>
+    <pre><code>.box {
+  border: 2px solid #333;
+  border-radius: 8px;
+}</code></pre>
     <ul>
-      <li>Conteúdo</li>
-      <li>Padding (espaço interno)</li>
-      <li>Border (borda)</li>
-      <li>Margin (espaço externo)</li>
+      <li><em>Shorthand</em>: <code>border: 2px solid #333;</code></li>
+      <li>Individual: <code>border-top</code>, <code>border-right</code>, etc.</li>
     </ul>
   </div>
 
   <div class="section">
-    <h2>6. Block vs Inline</h2>
+    <h2>6. Espaçamentos: Padding & Margin</h2>
+    <p><strong>Padding (interno):</strong></p>
+    <pre><code>.container {
+  padding: 20px;           /* todos os lados */
+  padding: 10px 20px;      /* vertical 10px, horizontal 20px */
+  padding: 5px 10px 15px;  /* top, hor., bottom */
+}</code></pre>
+    <p><strong>Margin (externo):</strong></p>
+    <pre><code>.container {
+  margin: 30px; 
+  margin: 10px 0;          /* vertical, horizontal */
+}</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>7. Box Model</h2>
+    <pre><code>┌───────────────────────┐
+│      margin           │
+│ ┌───────────────────┐ │
+│ │    border         │ │
+│ │ ┌───────────────┐ │ │
+│ │ │   padding     │ │ │
+│ │ │ ┌───────────┐ │ │ │
+│ │ │ │ content   │ │ │ │
+│ │ │ └───────────┘ │ │ │
+│ │ └───────────────┘ │ │
+│ └───────────────────┘ │
+└───────────────────────┘</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>8. Display</h2>
+    <pre><code>div { display: block; }
+span { display: inline; }
+button { display: inline-block; }</code></pre>
     <ul>
-      <li><strong>Block:</strong> ocupa toda a largura disponível e inicia em nova linha (ex.: <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>).</li>
-      <li><strong>Inline:</strong> ocupa apenas o espaço necessário e flui na mesma linha (ex.: <code>&lt;a&gt;</code>, <code>&lt;strong&gt;</code>).</li>
+      <li><strong>block:</strong> ocupa toda largura, quebra linha.</li>
+      <li><strong>inline:</strong> ocupa só conteúdo, não quebra.</li>
+      <li><strong>inline-block:</strong> mistura ambos.</li>
     </ul>
   </div>
 
   <div class="section">
-    <h2>7. Categorias de Valores em CSS</h2>
+    <h2>9. Valores e Unidades</h2>
     <ul>
-      <li><strong>Keyword:</strong> nomes predefinidos (ex.: <code>red</code>).</li>
-      <li><strong>Número:</strong> unidades (ex.: <code>45px</code>).</li>
-      <li><strong>String:</strong> texto entre aspas (ex.: <code>"Arial"</code>).</li>
-      <li><strong>Cores:</strong> hexadecimal (<code>#RRGGBB</code>), palavra-chave, RGB (<code>rgb(255,0,0)</code>).</li>
+      <li><strong>Absolutas:</strong> <code>px</code>, <code>pt</code>.</li>
+      <li><strong>Relativas:</strong> <code>%</code>, <code>em</code>, <code>rem</code>, <code>vh</code>.</li>
+      <li><strong>Keywords:</strong> <code>auto</code>, <code>inherit</code>.</li>
     </ul>
   </div>
 
   <div class="section">
-    <h2>8. Próximos Passos (Dever de Casa)</h2>
-    <p>Resolva exercícios para reforçar:</p>
-    <ul>
-      <li>Sintaxe e <em>rule sets</em></li>
-      <li>Seletores: elemento, agrupados, classe, ID</li>
-      <li>Box Model: padding, border, margin</li>
-      <li>Display: <code>block</code> vs <code>inline</code></li>
-      <li>Categorias de valores: keywords, unidades, cores</li>
-      <li>Propriedades básicas:
-        <ul>
-          <li><code>color</code> &amp; <code>background-color</code></li>
-          <li><code>font-family</code> &amp; <code>font-size</code></li>
-          <li><code>margin</code> &amp; <code>padding</code></li>
-        </ul>
-      </li>
-    </ul>
+    <h2>Dica Final</h2>
+    <p>Organize seus estilos em <code>styles.css</code> e vincule com:</p>
+    <pre><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
   </div>
 
 </body>
