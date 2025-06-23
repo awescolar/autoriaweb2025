@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resumo – Primeira Aula de CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 2rem auto;
+      line-height: 1.6;
+      padding: 0 1rem;
+      background: #f9f9f9;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #666;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background: #efefef;
+    }
+    ul {
+      margin: 0.5rem 0 1.5rem 1.5rem;
+    }
+    .dever-casa {
+      background: #fff;
+      border-left: 4px solid #007acc;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    .next-steps {
+      font-style: italic;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔄 Cronograma Atualizado – Primeira Aula de CSS</h1>
+  <p><strong>Tempo total:</strong> 1h30 (90 min)</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Etapa</th>
+        <th>Duração</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1. Boas-vindas e contexto</td>
+        <td>5 min</td>
+        <td>Breve apresentação: o que é CSS e por que usamos (“decoração” do HTML).</td>
+      </tr>
+      <tr>
+        <td>2. Sintaxe e regras básicas</td>
+        <td>10 min</td>
+        <td>Entender um <code>rule set</code>: <code>seletor { propriedade: valor; }</code> (declaração, propriedade, valor).</td>
+      </tr>
+      <tr>
+        <td>3. Como escolher elementos (seletores)</td>
+        <td>10 min</td>
+        <td>Seletores de elemento (<code>h1</code>), agrupados (<code>h1, h2, p</code>), classes e IDs (visão rápida).</td>
+      </tr>
+      <tr>
+        <td>4. Modelo de formatação (Box Model)</td>
+        <td>15 min</td>
+        <td>Cada elemento é uma “caixa”: conteúdo, padding, border, margin. Visualizar e manipular espaçamentos.</td>
+      </tr>
+      <tr>
+        <td>5. Tipos de exibição (block vs inline)</td>
+        <td>10 min</td>
+        <td>Diferença entre elementos de nível de bloco (<code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>) e inline (<code>&lt;a&gt;</code>, <code>&lt;strong&gt;</code>).</td>
+      </tr>
+      <tr>
+        <td>6. Categorias de valores em CSS</td>
+        <td>10 min</td>
+        <td>Como escrever valores: keyword (<code>red</code>), número (<code>45px</code>), string (“Arial”), cor (hex, rgb).</td>
+      </tr>
+      <tr>
+        <td>7. Principais propriedades na prática</td>
+        <td>15 min</td>
+        <td>Exercícios curtos com <code>color</code>, <code>background-color</code>, <code>font-family</code>, <code>font-size</code>, <code>margin</code>, <code>padding</code>.</td>
+      </tr>
+      <tr>
+        <td>8. Prática guiada</td>
+        <td>20 min</td>
+        <td>Aplicar tudo num <code>index.html</code> de exemplo: criar <code>&lt;style&gt;…&lt;/style&gt;</code> e estilizar título, parágrafo e lista.</td>
+      </tr>
+      <tr>
+        <td>9. Fechamento e dúvidas</td>
+        <td>5 min</td>
+        <td>Recapitular pontos chave e anunciar atividade para casa.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="dever-casa">
+    <h2>🏠 Dever de Casa</h2>
+    <p>Nesta semana, você deverá resolver uma lista de exercícios para reforçar os seguintes temas:</p>
+    <ul>
+      <li><strong>Sintaxe e rule sets:</strong> escrever seletores e declarações completas</li>
+      <li><strong>Seletores:</strong> elemento, agrupados, classe e ID</li>
+      <li><strong>Box Model:</strong> padding, border e margin na prática</li>
+      <li><strong>Display:</strong> testar <code>block</code> vs <code>inline</code> em diferentes elementos</li>
+      <li><strong>Categorias de valores:</strong> keywords, unidades (px, em), cores (hex, rgb)</li>
+      <li><strong>Propriedades básicas:</strong>  
+        <ul>
+          <li><code>color</code> &amp; <code>background-color</code></li>
+          <li><code>font-family</code> &amp; <code>font-size</code></li>
+          <li><code>margin</code> &amp; <code>padding</code></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="next-steps">
+    <p><strong>Próximos passos:</strong></p>
+    <ul>
+      <li>Revisar os conceitos de hoje com esses exercícios em casa.</li>
+      <li>Na próxima aula, aprofundaremos layouts com <strong>CSS externo</strong> e <strong>seletores avançados</strong>.</li>
+    </ul>
+  </div>
+
+</body>
+</html>
