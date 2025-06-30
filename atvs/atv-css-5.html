@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS 1: Introdução – Autoria Web</title>
+    <title>CSS 2: Introdução – Autoria Web</title>
     <!-- Tailwind + daisyUI via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -53,14 +53,11 @@
             <div class="px-6 pt-10 pb-16 flex flex-col items-center">
                 <div class="card w-full max-w-xs">
                     <figure class="px-6 pt-6">
-                        <img src="https://picsum.photos/400/400?random=2" alt="CSS 1: Introdução" class="rounded-xl" />
+                        <img src="/atvs/img/card-referencia.png" alt="CSS 2: Introdução" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                        <h2 class="card-title text-lg mt-4 font-semibold">CSS 1: Introdução</h2>
-                        <p class="text-[13px] text-left mt-4 text-gray-600">
-                            Nesta aula conhecemos o básico de CSS, como funciona as regras do CSS para formatar um HTML,
-                            como aplicar a forma incorporada e vimos sobre cores e box-model.
-                        </p>
+                        <h2 class="card-title text-lg mt-4 font-semibold">CSS 2: Tarefa prática</h2>
+                        
                     </div>
                 </div>
             </div>
@@ -74,119 +71,77 @@
                 <div class="flex">
                     <div>
                         <time class="block text-xs text-gray-500">Junho 30, 2025</time>
-                        <h3 class="mt-1 text-2xl font-semibold">CSS 2 – Espaçamentos e Estilos Visuais</h3>
+                        <h3 class="mt-1 text-2xl font-semibold">CSS 2 – Espaçamentos e estilos visuais</h3>
+						<p class="text-[14px] text-left mt-4 text-gray-600">
+                            Nesta tarefa, você deverá trabalhar com os conteúdos trabalhados em sala de aula. Aqui será necessário utilizar o seguinte:
+							
+                        </p>
+						<div class="text-[14px] text-left mt-4 text-gray-600"><strong>Conhecimentos:</strong>Padding; Margin; Border; Variáveis; Background; Fonts.</div>
                     </div>
+					
                 </div>
                 <hr />
+
+				<section>					
+                    <h3 class="text-xl font-semibold mb-2">Imagem de Referência para Essa atividade</h3>
+                    <p class="mb-2 text-gray-700">
+						Veja abaixo a imagem de referência de como seu projeto deverá ficar ao final.
+					</p>
+					<figure class="p-4 mt-5">
+						<img src="/atvs/img/card-referencia-com-anotaçoes.png" alt="">
+					</figure>
+				</section>
 
 
                 <section class="bg-white p-6 rounded-lg mb-6">
                     <h3 class="text-xl font-semibold mb-2">1. Padding</h3>
                     <p class="mb-2 text-gray-700">
-                        Você vai usar o <code class="bg-gray-100 px-1 rounded font-mono text-sm">padding</code> para
-                        criar espaço interno que afasta o conteúdo da borda.
-                        Vamos explorar as propriedades <code
-                            class="bg-gray-100 px-1 rounded font-mono text-sm">padding-top</code>, <code
-                            class="bg-gray-100 px-1 rounded font-mono text-sm">padding</code> (shorthand) e variar
-                        unidades.
+                        Você deverá usar Padding nas laterais do card.
                     </p>
-                    <pre class="bg-gray-100 p-4 rounded font-mono text-sm">
-.caixa {
-  padding: 16px;        /* todos os lados */
-  padding: 8px 16px;    /* vertical 8px, horizontal 16px */
-}
-  </pre>
+                    <pre class="bg-gray-100 p-4 rounded font-mono text-sm">.card-img {
+  padding-left: 24px;
+  padding-right: 24px;
+}</pre>
                 </section>
 
                 <section class="bg-white p-6 rounded-lg mb-6">
-                    <h3 class="text-xl font-semibold mb-2">2. Border</h3>
+                    <h3 class="text-xl font-semibold mb-2">2. Margin</h3>
                     <p class="mb-2 text-gray-700">
-                        Iremos aplicar <code class="bg-gray-100 px-1 rounded font-mono text-sm">border</code> para
-                        desenhar linhas ao redor do padding.
-                        Estudaremos as propriedades <code
-                            class="bg-gray-100 px-1 rounded font-mono text-sm">border-width</code>, <code
-                            class="bg-gray-100 px-1 rounded font-mono text-sm">border-style</code>, <code
-                            class="bg-gray-100 px-1 rounded font-mono text-sm">border-color</code> e <code
-                            class="bg-gray-100 px-1 rounded font-mono text-sm">border-radius</code>.
+                        Será necessário aplicar marging entre elementos.
                     </p>
-                    <pre class="bg-gray-100 p-4 rounded font-mono text-sm">
-.caixa {
-  border: 2px solid #333;   /* largura, estilo e cor */
-  border-radius: 8px;       /* cantos arredondados */
-}
-  </pre>
+                    <pre class="bg-gray-100 p-4 rounded font-mono text-sm">.card-img {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}</pre>
                 </section>
 
                 <section class="bg-white p-6 rounded-lg mb-6">
-                    <h3 class="text-xl font-semibold mb-2">3. Margin</h3>
+                    <h3 class="text-xl font-semibold mb-2">3. Fontes</h3>
                     <p class="mb-2 text-gray-700">
-                        Vamos usar <code class="bg-gray-100 px-1 rounded font-mono text-sm">margin</code> para criar
-                        espaço externo que separa elementos vizinhos.
-                        Iremos experimentar a shorthand <code
-                            class="bg-gray-100 px-1 rounded font-mono text-sm">margin</code> e margens individuais
-                        (<code class="bg-gray-100 px-1 rounded font-mono text-sm">margin-top</code>, etc.).
+                        Vamos usar fontes a partir do <a href="https://fonts.google.com/" class="no-underline hover:underline">Google Fontes</a>. As fontes estão listadas abaixo:
+                        <ul>
+							<li>Archivo</li>
+							<li>Inter</li>
+						</ul>
                     </p>
-                    <pre class="bg-gray-100 p-4 rounded font-mono text-sm">
-.caixa {
-  margin: 24px auto;    /* vertical 24px, horizontal centralizado */
-}
-  </pre>
-                </section>
-
-                <section class="bg-white p-6 rounded-lg mb-6">
-                    <h3 class="text-xl font-semibold mb-2">4. Cores e Variáveis CSS</h3>
+				</section>
+				<section class="bg-white p-6 rounded-lg mb-6">
+                    <h3 class="text-xl font-semibold mb-2">4. Arquivos para esta atividade</h3>
                     <p class="mb-2 text-gray-700">
-                        Iremos definir cores em diferentes formatos (keyword, hex, RGB, HSL) e criar variáveis CSS em
-                        <code class="bg-gray-100 px-1 rounded font-mono text-sm">:root</code>, usando-as com <code
-                            class="bg-gray-100 px-1 rounded font-mono text-sm">var(--nome)</code>.
+                        Acesse os arquivos para realizar a programação desse card:
+                        <ol class="list-decimal pl-5">
+							<li>
+								<a href="img/bg.png" class="text-sky-500 no-underline hover:underline">Imagem de Fundo</a>
+							</li>
+							<li><a href="img/logo-figma.png" class="text-sky-500 no-underline hover:underline">Logo Figma</a></li>
+							<li>
+							<a href="img/logo-boost.png" class="text-sky-500 no-underline hover:underline">Logo Boost</a>
+							</li>
+						</ol>
                     </p>
-                    <pre class="bg-gray-100 p-4 rounded font-mono text-sm">
-:root {
-  --cor-primaria: #3498db;
-}
-h1 {
-  color: var(--cor-primaria);
-}
-  </code></pre>
-                </section>
+				</section>
 
-                <section class="bg-white p-6 rounded-lg mb-6">
-                    <h3 class="text-xl font-semibold mb-2">5. Backgrounds</h3>
-                    <p class="mb-2 text-gray-700">
-                        Você vai explorar as propriedades de fundo: <code
-                            class="bg-gray-100 px-1 rounded font-mono text-sm">background-color</code>, <code
-                            class="bg-gray-100 px-1 rounded font-mono text-sm">background-image</code>, <code
-                            class="bg-gray-100 px-1 rounded font-mono text-sm">background-size</code>, <code
-                            class="bg-gray-100 px-1 rounded font-mono text-sm">background-position</code> e <code
-                            class="bg-gray-100 px-1 rounded font-mono text-sm">background-repeat</code>.
-                    </p>
-                    <pre class="bg-gray-100 p-4 rounded font-mono text-sm"><code></code>body {
-  background-color: #f0f0f0;
-  background-image: url('fundo.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;}<code></pre>
-                </section>
-
-                <section class="bg-white p-6 rounded-lg">
-                    <p class="text-gray-600">
-                        Na aula, você praticará cada um desses conceitos criando caixas, cartões e fundos para entender
-                        o impacto de cada propriedade no layout.
-                    </p>
-                </section>
-
-                <div class="space-y-2 pt-6">
-                    <h4 class="text-lg text-slate-800 uppercase font-semibold border-t-2 border-slate-800 bg-slate-50 p-3">5. Atividades</h4>
-                    <section class="p-6 rounded-lg">
-                        <p class="mb-4 text-gray-700">
-                            Acesse as atividades trabalhadas na última aula:
-                        </p>
-                        <ul class="list-disc list-inside space-y-3 mb-4 text-gray-700">
-                            <li>
-                                <span class="font-semibold">Atividade 1 - <a href="https://awescolar.github.io/autoriaweb2025/atvs/atv-css-5.html">acesse aqui</a></span>
-                            </li>
-                        </ul>
-                    </section>
+                
 
             </article>
         </main>
