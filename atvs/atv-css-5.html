@@ -1,57 +1,197 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Atividade CSS 4</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 1: Introdução – Autoria Web</title>
+    <!-- Tailwind + daisyUI via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            plugins: [daisyui],
+            daisyui: { themes: ["light"] }
+        };
+    </script>
+    <!-- Prism CSS (tema “Tomorrow Night”) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+
 </head>
-<body>
-	<h1>Linguagens e Tecnologias Frontend.</h1>
 
-	<ul>
-	  <li>
-	  	<img src="http://introducao-frontend.cesimarxavier.com.br/assets/img/html.png" alt=""> HTML 5
-	  </li>
-	  <li>
-	  	<img src="http://introducao-frontend.cesimarxavier.com.br/assets/img/css.png" alt=""> CSS 3
-	  </li>
-	  <li>
-	  	<img src="http://introducao-frontend.cesimarxavier.com.br/assets/img/javascript.png" alt=""> JavaScript
-	  </li>
-	  <li>
-	  	<img src="http://introducao-frontend.cesimarxavier.com.br/assets/img/nodejs.png" alt=""> Node JS
-	  </li>
-	  <li>
-	  	<img src="http://introducao-frontend.cesimarxavier.com.br/assets/img/sass.png" alt=""> SASS
-	  </li>
-	  <li>
-	  	<img src="http://introducao-frontend.cesimarxavier.com.br/assets/img/less.png" alt=""> LESS
-	  </li>
-	  
-	</ul>
+<body class="min-h-screen bg-base-200 text-base-content">
+    <!-- Prism Core + Autoloader para CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
 
-	<h2>HTML</h2>
-	<p>HTML (abreviação para a expressão inglesa HyperText Markup Language, que significa Linguagem de Marcação de Hipertexto) é uma linguagem de marcação utilizada na construção de páginas na Web.</p>
-	
-	<h2>CSS</h2>
-	<p>Cascading Style Sheets (CSS) é uma linguagem de folhas de estilo utilizada para definir a apresentação de documentos escritos em uma linguagem de marcação, como HTML ou XML.</p>
+    <!-- HEADER -->
+    <header class="border-b bg-white">
+        <div class="mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between px-6 py-3">
+            <h1 class="text-[15px] font-semibold whitespace-nowrap">
+                Informática para Internet · Autoria Web
+            </h1>
+            <nav class="flex space-x-2 text-[11px] font-medium text-gray-500 mt-1 sm:mt-0">
+                <span>HTML</span><span>/</span>
+                <a href="https://awescolar.github.io/autoriaweb2025/">CSS</a><span>/</span>
+                <span>Java Script</span>
+            </nav>
+        </div>
+    </header>
 
-	<h2>JavaScript</h2>
-	<P>JavaScript é uma linguagem de programação interpretada. Foi originalmente implementada como parte dos navegadores web para que scripts pudessem ser executados do lado do cliente e interagissem com o usuário sem a necessidade deste script passar pelo servidor, controlando o navegador, realizando comunicação assíncrona e alterando o conteúdo do documento exibido.</P>
+    <div class="flex">
 
-	<h2>Node JS</h2>
-	<p>Node.js é um interpretador de código JavaScript que funciona do lado do servidor. Seu objetivo é ajudar programadores na criação de aplicações de alta escalabilidade (como um servidor web), com códigos capazes de manipular dezenas de milhares de conexões simultâneas, numa única máquina física. O Node.js é baseado no interpretador V8. Foi criado por Ryan Dahl em 2009, e seu desenvolvimento é mantido pela empresa Joyent, onde Dahl trabalha.</p>
+        <!-- ROTATED STRIP -->
+        <aside class="hidden lg:flex flex-col justify-center items-center w-12 border-r bg-slate-50">
+            <span class="text-[11px] tracking-widest uppercase text-gray-500"
+                style="writing-mode: vertical-rl; transform: rotate(180deg);">
+                Hosted by GitHub / Informática para Internet / Autoria Web
+            </span>
+        </aside>
 
-	<h2>SASS</h2>
-	<p>
-		Quando pensamos em produtividade, logo nos perguntamos e pesquisamos como aumentá-la sem grandes impactos. Então, os pré-processadores e frameworks para CSS vem suprir essa necessidade. Com vocês, um pouco de Sass.
-	</p>
+        <!-- SIDEBAR -->
+        <aside class="bg-slate-50 w-full lg:w-72 border-r">
+            <div class="px-6 pt-10 pb-16 flex flex-col items-center">
+                <div class="card w-full max-w-xs">
+                    <figure class="px-6 pt-6">
+                        <img src="https://picsum.photos/400/400?random=2" alt="CSS 1: Introdução" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title text-lg mt-4 font-semibold">CSS 1: Introdução</h2>
+                        <p class="text-[13px] text-left mt-4 text-gray-600">
+                            Nesta aula conhecemos o básico de CSS, como funciona as regras do CSS para formatar um HTML,
+                            como aplicar a forma incorporada e vimos sobre cores e box-model.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </aside>
 
-	<h2>LESS</h2>
-	<p>
-		LESS é uma linguagem de folha de estilos dinâmica desenhada por Alexis Sellier. Ela foi influenciada por Sass e influenciou a nova sintaxe "SCSS" do Sass, que adaptou sua sintaxe de formação de blocos do tipo CSS.
-	</p>
+        <!-- MAIN CONTENT -->
+        <main class="min-h-screen px-8">
+            <article class="bg-white rounded-lg p-8 max-w-3xl mx-auto space-y-6">
+
+                <!-- Header da aula -->
+                <div class="flex">
+                    <div>
+                        <time class="block text-xs text-gray-500">Junho 30, 2025</time>
+                        <h3 class="mt-1 text-2xl font-semibold">CSS 2 – Espaçamentos e Estilos Visuais</h3>
+                    </div>
+                </div>
+                <hr />
 
 
+                <section class="bg-white p-6 rounded-lg mb-6">
+                    <h3 class="text-xl font-semibold mb-2">1. Padding</h3>
+                    <p class="mb-2 text-gray-700">
+                        Você vai usar o <code class="bg-gray-100 px-1 rounded font-mono text-sm">padding</code> para
+                        criar espaço interno que afasta o conteúdo da borda.
+                        Vamos explorar as propriedades <code
+                            class="bg-gray-100 px-1 rounded font-mono text-sm">padding-top</code>, <code
+                            class="bg-gray-100 px-1 rounded font-mono text-sm">padding</code> (shorthand) e variar
+                        unidades.
+                    </p>
+                    <pre class="bg-gray-100 p-4 rounded font-mono text-sm">
+.caixa {
+  padding: 16px;        /* todos os lados */
+  padding: 8px 16px;    /* vertical 8px, horizontal 16px */
+}
+  </pre>
+                </section>
+
+                <section class="bg-white p-6 rounded-lg mb-6">
+                    <h3 class="text-xl font-semibold mb-2">2. Border</h3>
+                    <p class="mb-2 text-gray-700">
+                        Iremos aplicar <code class="bg-gray-100 px-1 rounded font-mono text-sm">border</code> para
+                        desenhar linhas ao redor do padding.
+                        Estudaremos as propriedades <code
+                            class="bg-gray-100 px-1 rounded font-mono text-sm">border-width</code>, <code
+                            class="bg-gray-100 px-1 rounded font-mono text-sm">border-style</code>, <code
+                            class="bg-gray-100 px-1 rounded font-mono text-sm">border-color</code> e <code
+                            class="bg-gray-100 px-1 rounded font-mono text-sm">border-radius</code>.
+                    </p>
+                    <pre class="bg-gray-100 p-4 rounded font-mono text-sm">
+.caixa {
+  border: 2px solid #333;   /* largura, estilo e cor */
+  border-radius: 8px;       /* cantos arredondados */
+}
+  </pre>
+                </section>
+
+                <section class="bg-white p-6 rounded-lg mb-6">
+                    <h3 class="text-xl font-semibold mb-2">3. Margin</h3>
+                    <p class="mb-2 text-gray-700">
+                        Vamos usar <code class="bg-gray-100 px-1 rounded font-mono text-sm">margin</code> para criar
+                        espaço externo que separa elementos vizinhos.
+                        Iremos experimentar a shorthand <code
+                            class="bg-gray-100 px-1 rounded font-mono text-sm">margin</code> e margens individuais
+                        (<code class="bg-gray-100 px-1 rounded font-mono text-sm">margin-top</code>, etc.).
+                    </p>
+                    <pre class="bg-gray-100 p-4 rounded font-mono text-sm">
+.caixa {
+  margin: 24px auto;    /* vertical 24px, horizontal centralizado */
+}
+  </pre>
+                </section>
+
+                <section class="bg-white p-6 rounded-lg mb-6">
+                    <h3 class="text-xl font-semibold mb-2">4. Cores e Variáveis CSS</h3>
+                    <p class="mb-2 text-gray-700">
+                        Iremos definir cores em diferentes formatos (keyword, hex, RGB, HSL) e criar variáveis CSS em
+                        <code class="bg-gray-100 px-1 rounded font-mono text-sm">:root</code>, usando-as com <code
+                            class="bg-gray-100 px-1 rounded font-mono text-sm">var(--nome)</code>.
+                    </p>
+                    <pre class="bg-gray-100 p-4 rounded font-mono text-sm">
+:root {
+  --cor-primaria: #3498db;
+}
+h1 {
+  color: var(--cor-primaria);
+}
+  </code></pre>
+                </section>
+
+                <section class="bg-white p-6 rounded-lg mb-6">
+                    <h3 class="text-xl font-semibold mb-2">5. Backgrounds</h3>
+                    <p class="mb-2 text-gray-700">
+                        Você vai explorar as propriedades de fundo: <code
+                            class="bg-gray-100 px-1 rounded font-mono text-sm">background-color</code>, <code
+                            class="bg-gray-100 px-1 rounded font-mono text-sm">background-image</code>, <code
+                            class="bg-gray-100 px-1 rounded font-mono text-sm">background-size</code>, <code
+                            class="bg-gray-100 px-1 rounded font-mono text-sm">background-position</code> e <code
+                            class="bg-gray-100 px-1 rounded font-mono text-sm">background-repeat</code>.
+                    </p>
+                    <pre class="bg-gray-100 p-4 rounded font-mono text-sm"><code></code>body {
+  background-color: #f0f0f0;
+  background-image: url('fundo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;}<code></pre>
+                </section>
+
+                <section class="bg-white p-6 rounded-lg">
+                    <p class="text-gray-600">
+                        Na aula, você praticará cada um desses conceitos criando caixas, cartões e fundos para entender
+                        o impacto de cada propriedade no layout.
+                    </p>
+                </section>
+
+                <div class="space-y-2 pt-6">
+                    <h4 class="text-lg text-slate-800 uppercase font-semibold border-t-2 border-slate-800 bg-slate-50 p-3">5. Atividades</h4>
+                    <section class="p-6 rounded-lg">
+                        <p class="mb-4 text-gray-700">
+                            Acesse as atividades trabalhadas na última aula:
+                        </p>
+                        <ul class="list-disc list-inside space-y-3 mb-4 text-gray-700">
+                            <li>
+                                <span class="font-semibold">Atividade 1 - <a href="https://awescolar.github.io/autoriaweb2025/atvs/atv-css-5.html">acesse aqui</a></span>
+                            </li>
+                        </ul>
+                    </section>
+
+            </article>
+        </main>
+
+    </div>
 </body>
+
 </html>
