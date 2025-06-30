@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Autoria Web · Resumos de Aula</title>
+  <!-- Tailwind + daisyUI via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      plugins: [daisyui],
+      daisyui: { themes: ["light"] }
+    };
+  </script>
+</head>
+<body class="min-h-screen bg-base-200 text-base-content">
+
+  <!-- HEADER -->
+  <header class="border-b bg-white">
+    <div class="mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between px-6 py-3">
+      <h1 class="text-[15px] font-semibold whitespace-nowrap">
+        Informática para Internet · Autoria Web
+      </h1>
+      <nav class="flex space-x-2 text-[11px] font-medium text-gray-500 mt-1 sm:mt-0">
+        <span>HTML</span><span>/</span>
+        <span>CSS</span><span>/</span>
+        <span>Java&nbsp;Script</span>
+      </nav>
+    </div>
+  </header>
+
+  <div class="flex">
+
+    <!-- ROTATED STRIP -->
+    <aside style="background: #F8FAFC;" class="hidden lg:flex flex-col justify-center items-center w-12 border-r bg-white">
+      <span
+        class="text-[11px] tracking-widest uppercase text-gray-500"
+        style="writing-mode: vertical-rl; transform: rotate(180deg);"
+      >
+        Hosted by GitHub / Informática para Internet / Autoria Web
+      </span>
+    </aside>
+
+    <!-- SIDEBAR -->
+    <aside style="background: #F8FAFC;" class="w-full lg:w-72 border-r bg-white">
+      <div class="px-6 pt-10 pb-16 flex flex-col items-center">
+        <div class="card w-full max-w-xs">
+          <figure class="px-6 pt-6">
+            <img
+              src="https://picsum.photos/400/400?random=1"
+              alt="Capa"
+              class="rounded-xl"
+            />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title text-lg mt-4 font-semibold">Autoria Web</h2>
+            <p class="text-[13px] text-gray-600">
+              Materiais de aula compartilhados com os alunos de Informática
+              para Internet do Campus Natal Zona Norte.
+            </p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 min-h-screen px-8 py-10">
+      <h2 class="text-2xl font-bold mb-8">Aulas</h2>
+
+      <article class="bg-white rounded-lg shadow border p-7 max-w-3xl lg:max-w-4xl">
+        <time class="block text-xs text-gray-500">Junho 30, 2025</time>
+        <h3 class="mt-1 text-lg font-semibold">CSS 1: Introdução</h3>
+        <p class="mt-3 text-sm text-gray-700 leading-relaxed">
+          Na aula de hoje aprendemos o que é CSS e como aplicá-lo: vimos as três
+          formas de incorporação (incorporado - na própria página), entendemos a
+          estrutura de uma regra CSS (<code class="rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-gray-500/10 ring-inset">seletor { propriedade: valor; }</code>),
+          trabalhamos seletores básicos (elemento e elementos aninhados),
+          exploramos o modelo de caixa (conteúdo, padding, border e margin),
+          usamos propriedades essenciais como <code class="rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-gray-500/10 ring-inset">color</code>,
+          <code class="rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-gray-500/10 ring-inset">background-color</code>, <code class="rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-gray-500/10 ring-inset">border-color</code>,
+          <code class="rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-gray-500/10 ring-inset">font-size</code>, <code class="rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-gray-500/10 ring-inset">margin</code> e <code class="rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-gray-500/10 ring-inset">padding</code>,
+          diferenciamos elementos <code class="rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-gray-500/10 ring-inset">block</code> e <code class="rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-gray-500/10 ring-inset">inline</code> e
+          conhecemos categorias de valores (keywords, unidades e cores em
+          hex/RGB).
+        </p>
+        <div class="mt-4">
+            <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-gray-500/10 ring-inset">introdução teórica</span>
+            <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-gray-500/10 ring-inset">exercícios práticos</span>
+            <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-gray-500/10 ring-inset">atividades extraclasse</span>
+        </div>
+        <a
+          href="aula-1.html"
+          class="mt-4 inline-flex items-center text-rose-500 hover:underline text-sm font-medium"
+        >
+          <svg
+            class="w-3 h-3 mr-1"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <polygon points="2,2 18,10 2,18"></polygon>
+          </svg>
+          Acessar
+        </a>
+      </article>
+
+      <article class="bg-white rounded-lg shadow border p-7 max-w-3xl lg:max-w-4xl mt-8">
+        <time class="block text-xs text-gray-500">Junho 23, 2025</time>
+        <h3 class="mt-1 text-lg font-semibold">CSS 2 – Espaçamentos e Estilos Visuais</h3>
+        <p class="mt-3 text-sm text-gray-700 leading-relaxed">
+        Vamos aprofundar o <strong>Box Model</strong> (padding, border, margin), aprender a usar <strong>cores</strong> e <strong>variáveis CSS</strong> e configurar diferentes <strong>backgrounds</strong>.
+        </p>
+
+        <a
+          href="aula-2.html"
+          class="mt-4 inline-flex items-center text-rose-500 hover:underline text-sm font-medium"
+        >
+          <svg
+            class="w-3 h-3 mr-1"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <polygon points="2,2 18,10 2,18"></polygon>
+          </svg>
+          Acessar
+        </a>
+      </article>
+
+      <!-- Repita <article> para as demais aulas -->
+
+    </main>
+
+  </div>
+</body>
+</html>
