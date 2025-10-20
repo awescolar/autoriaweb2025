@@ -1,0 +1,23 @@
+/** trabalhando com o header*/
+header{}
+header nav{}
+header nav ul{}
+header nav ul li{}
+header nav ul li a{}
+header nav .sociais{}
+header nav .sociais a{}
+
+/** conteudo principal */
+main{}
+main .perfil{}
+main .perfil h1{}
+main .perfil h3{}
+main .perfil button{}
+main .foto{}
+main .foto img{}
+
+main .last-jobs{}
+main .last-jobs h5{}
+main .last-jobs ul{}
+main .last-jobs ul li{}
+main .last-jobs ul li img{}
