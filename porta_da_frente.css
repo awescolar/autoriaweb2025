@@ -146,12 +146,13 @@ body {
     font-family: "Inter";
 }
 h2{
-    font-weight: lighter;
+    font-weight: 200;
     color: #707C8C;
     font-size: 26px;
 }
 p {
     color: #707C8C;
+    font-size: 16px;
 }
 
 h1 {
