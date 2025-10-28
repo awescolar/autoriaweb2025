@@ -1,63 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Atividade CSS - Aula</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Framework CSS</title>
+  <link rel="stylesheet" href="gabiru.css">
+</head>
+<body>
 
-    <style>
-      body {
-        font-family: "Inter";
-        padding: 20px;
-        background: #eee;
-      }
-
-      .card {
-        padding-left: 24px;
-        padding-right: 24px;
-        width: 624px;
-        background: #fff;
-        border-radius: 8px;
-      }
-
-      .card-body {
-        border-left: 1px solid #eee;
-        border-right: 1px solid #eee;
-        padding-top: 24px;
-        padding-bottom: 24px;
-      }
-
-      .footer {
-        padding-left: 24px;
-        padding-right: 24px;
-      }
-
-      h3 {
-        font-size: 32px;
-        font-family: "Archivo";
-      }
-    </style>
-  </head>
-  <body>
-    <div class="card">
-      <div class="card-body">
-        <img src="img/bg.png" alt="" />
-
-        <div class="footer">
-          <h3>Guia para organização e fluxo de trabalho em UI Design</h3>
-          <img src="img/logo-figma.png" alt="" />
-          <p>
-            Dicas práticas e efetivas para ganhar em produtividade e organização
-            em projetos no Figma.
-          </p>
-          <img src="img/logo-boost.png" alt="" />
+  <header>
+    <div class="container">
+      <div class="left">
+        <img src="img/logo.png">
+        <em>por Sérgio  Trindade</em>
+      </div>
+      <div class="right">
+        <div class="form">
+          <input type="text">    
         </div>
+        <ul>
+          <li><a href="#">O BLOG</a></li>
+          <li>|</li>
+          <li><a href="#">DOWNLOAD</a></li>
+        </ul>
       </div>
     </div>
-  </body>
+  </header>
+
+  <main>
+    <article>
+      <h1>Simão celerado: do nascimento à morte da democracia (VI) – o caso Alan Gideon</h1>
+      <div class="row">
+        por <a href="#">Sérgio Trindade</a> foi publicado em 16.out.2018
+      </div>
+      <p>Filho de Jacinto de Souza Rojão, um dos mais queridos funcionários da Escola Federal de Educação, Ciência, Filosofia e Tecnologia do Rio das Mortes (EFECFTRM), Alan Gideon assumiu vaga de concurso, como administrador...</p>
+      <a href="#">Continue lendo</a>
+    </article>
+    <h2>Principais categorias</h2>
+    <ul>
+      <li class="chips">CONTOS E CRÔNICAS</li>
+      <li class="chips">CANGAÇO</li>
+      <li class="chips">BRASIL</li>
+      <li class="chips">ECONOMIA</li>
+      <li class="chips">HISTÓRIA DO BRASIL</li>
+    </ul>
+    <div>
+      <a href="#">Ver todas as categorias</a>
+    </div>
+  </main>
+  
+</body>
 </html>
