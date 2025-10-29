@@ -1,0 +1,108 @@
+body {
+    font-family: "IBM Plex";
+    line-height: 1.6;
+    background-color: #000;
+    color: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/** header */
+header {
+    background-color: #222;
+    padding: 15px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+header nav ul li {
+    font-family: "IBM Plex Mono";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.14px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #9C9C9C;
+}
+
+header nav .sociais {}
+
+header nav .sociais a {}
+
+/** main */
+main {
+    font-family: "IBM Plex Mono";
+}
+
+main .perfil {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+main .perfil h1 {
+    font-family: "Raleway";
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;}
+
+main .perfil h3 {
+    font-family: "Raleway";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;}
+
+main .perfil button {
+    background: linear-gradient(90deg, #00ff66, #66ff33);
+    border: none;
+    color: #000;
+    font-weight: 600;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+main .foto {
+    display: flex;
+    justify-content: flex-end; 
+    margin-right: 16px;   
+}
+
+main .foto img {
+    border-radius: 50%;
+}
+
+main .last-jobs {}
+
+main .last-jobs h5 {}
+
+main .last-jobs ul {}
+
+main .last-jobs ul li {}
+
+main .ul li img {}
