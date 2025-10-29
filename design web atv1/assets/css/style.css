@@ -131,7 +131,14 @@ main .last-jobs {
 }
 
 main .last-jobs h5 {
-    /* espaço reservado pra título */
+    font-family: IBM Plex Mono;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: bottom;
+
 }
 
 main .last-jobs ul {
@@ -153,4 +160,79 @@ section {
     align-items: center;
     justify-content: space-between;
     padding: 40px;
+}
+/* ==============================
+   RESPONSIVIDADE — IPHONE 16 PRO MAX
+   (largura até 440px)
+============================== */
+@media (max-width: 440px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header nav ul {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header nav ul li {
+        font-size: 12px;
+    }
+
+    section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    main .perfil {
+        align-items: center;
+        text-align: center;
+    }
+
+    main .perfil h1 {
+        font-size: 1.8rem;
+    }
+
+    main .perfil h3 {
+        font-size: 1rem;
+    }
+
+    main .perfil p {
+        max-width: 90%;
+        font-size: 0.95rem;
+    }
+
+    main .perfil button {
+        width: 100%;
+        max-width: 280px;
+        font-size: 15px;
+    }
+
+    main .foto {
+        margin: 20px 0;
+    }
+
+    main .foto img {
+        width: 200px;
+        height: 200px;
+    }
+
+    main .last-jobs {
+        padding: 20px;
+    }
+
+    main .last-jobs ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
 }
