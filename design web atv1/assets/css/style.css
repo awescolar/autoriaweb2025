@@ -59,7 +59,7 @@ header nav .sociais {
 }
 
 header nav .sociais a {
-    /* Estilização futura */
+    position: relative;
 }
 
 /* ==============================
