@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+img {
+    max-width: 100%;
+    display: block
+}
+
+body {
+    font: 16px/1.6 system-ui, sans-serif;
+    color: #374151;
+    background: #f6f7f8;
+}
+
+.h1 {
+    font-size: 2rem;
+    font-weight: 800
+}
+
+.muted {
+    color: #6b7280
+}
+
+.mt-2 {
+    margin-top: .5rem
+}
+
+.mt-4 {
+    margin-top: 1rem
+}
+
+.mb-2 {
+    margin-bottom: .5rem
+}
+
+.mb-4 {
+    margin-bottom: 1rem
+}
+
+.p-2 {
+    padding: .5rem
+}
+
+.p-3 {
+    padding: 1rem
+}
+
+.text-center {
+    text-align: center
+}
+
+.primary {
+    color: #c62828
+}
+
+.chip {
+    border: 1px solid #e57373;
+    border-radius: 999px;
+    padding: .25rem .5rem;
+    color: #c62828;
+    background: #fff
+}
+
+.container {
+    max-width: 1100px;
+    margin-inline: auto;
+    padding-inline: 1rem
+}
+
+.flex {
+    display: flex
+}
+
+.items-center {
+    align-items: center
+}
+
+.between {
+    justify-content: space-between
+}
+
+.gap-2 {
+    gap: .5rem
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem
+}
+
+.col-12 {
+    flex: 1 1 100%
+}
+
+.col-6 {
+    flex: 1 1 100%
+}
+
+/* mobile */
+
+@media (min-width:768px) {
+    .col-6 {
+        flex: 1 1 calc(50% - 1rem)
+    }
+
+    .hide-mobile {
+        display: none
+    }
+}
+
+@media (min-width:1024px) {
+    .h1 {
+        font-size: 2.5rem
+    }
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem
+}
+
+header {
+    display: flex;
+    background-color: #C01616;
+    color: #FFF;
+
+}
+
+header li a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.categorias a {
+    text-decoration: none;
+    color: #EB5151;
+    border: solid 2px;
+}
+
+body {
+    font-family: "Inter";
+}
+h2{
+    font-weight: lighter;
+    color: #707C8C;
+    font-size: 26px;
+}
+p {
+    color: #707C8C;
+}
+
+h1 {
+    font-weight: 800;
+    color: #273644;
+}
+
+article a {
+    color: #C01616;
+}
+
+div a {
+    color: #8D9AA6;
+}
+
+.box {
+    display: flex;
+}
+
+.box a {
+    color: #EB5151;
+    font-weight: 700;
+}
+
+.negrito {
+    color: #3C4B58;
+}
+
+.box {
+    background-color: #EFF2F7;
+}
