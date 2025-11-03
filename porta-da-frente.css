@@ -266,3 +266,17 @@ article a {
         font-size: 40px;
     }
 }
+.midias{
+    padding-top: 80px;
+    
+}
+.midias h2{
+    display: flex;
+    color:  #EB5151;
+    font-family: Inter;
+}
+.galeria {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
