@@ -1,50 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini framework</title>
-    <a href="framework.css"></a>
+    <title>Simão celerado - História</title>
+    <link rel="stylesheet" href="framework.css">
 </head>
+
 <body>
     <header>
-        <div class="container">
-            <div class="left">
-
-
-            </div>
-        
-
-        <div class="right">
-
+        <div class="esquerda">
+            <ul>
+                <li><img src="imagens/Vector.png" alt=""></li>
+                <li>por Sérgio Trindade</li>
+            </ul>
         </div>
-        <div class="form">
-            <input type="text">
-        </div>
-        <ul>
-            <li><a href="#">O BLOG</a></li>
-            <li></li>
-            <li><a href="#"> DOWNNLOAD</a></li>
-        </ul>
+        <div class="direita">
+            <ul>
+                <li><a href="#">O BLOG</a></li>
+                <li>|</li>
+                <li><a href="#">DOWNLOADS</a></li>
+            </ul>
         </div>
     </header>
 
     <main>
         <article>
-            <h1>Simão celerado: do nascimento à morte da democracia (VI) – o caso Alan Gideon</h1>
-            <div class="row">
-                por <a href="#">Sergio Trindade</a> foi publicado em 16.out.2018
-            </div>
-            <p>Filho de Jacinto de Souza Rojão, um dos mais queridos funcionários da Escola Federal de Educação, Ciência, Filosofia e Tecnologia do Rio das Mortes (EFECFTRM), Alan Gideon assumiu vaga de concurso, como administrador...</p>
-            <a href="#">continue lendo</a>
+            <h2>
+                <span class="quote">❝</span>
+                Simão celerado: do nascimento à morte da <span class="line">democracia (VI) – o caso Alan Gideon</span>
+            </h2>
+            <p class="author">por <strong class="name">Sérgio Trindade</strong> foi publicado em
+                <time>16.out.2018</time> <span class="tag">10+</span>
+            </p>
+
+            <p class="content">
+                Filho de Jacinto de Souza Rojão, um dos mais queridos funcionários da Escola Federal de Educação,
+                Ciência, Filosofia e Tecnologia do Rio das Mortes (EFEFCTRM), Alan Gideon assumiu vaga de concurso, como
+                administrador...
+            </p>
+
+            <a href="#" class="continue">Continue lendo</a>
+
+            <hr>
+
+            <section class="categories">
+                <h3>Principais categorias</h3>
+                <div class="tags">
+                    <span>CONTOS E CRÔNICAS</span>
+                    <span>CANGAÇO</span>
+                    <span>BRASIL</span>
+                    <span>ECONOMIA</span>
+                    <span>HISTÓRIA DO BRASIL</span>
+                </div>
+                <a href="#" class="see-all">Ver todas as categorias</a>
+            </section>
         </article>
-        <ul>
-            <li class="chips">CONTOS E CRÔNICAS</li>
-            <li class="chips">CANGAÇO</li>
-            <li class="chips">BRASIL</li>
-            <li class="chips">ECONOMIA</li>
-            <li class="chips">HISTÓRIA DO BRASIL</li>
-        </ul>
     </main>
-</body>
+
+
 </html>
