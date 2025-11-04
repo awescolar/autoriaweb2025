@@ -129,7 +129,7 @@ header li a {
 
 /* ARTIGO */
 main {
-    width: 90%;
+    width: 100%;
     max-width: 800px;
     margin: 40px auto;
     padding: 10px;
@@ -268,53 +268,123 @@ article a {
         font-size: 40px;
     }
 }
-.midias{
+
+.midias {
     padding-top: 80px;
-    
+    gap: 30px;
 }
-.midias h2{
+
+.midias h2 {
     display: inline-block;
-    color:  #EB5151;
+    color: #EB5151;
     font-family: Inter;
-    margin-right: 210px;
+    margin-left: 66px;
 }
+
+
 .galeria {
     display: flex;
     gap: 16px;
     justify-content: center;
 }
+
 .galeria a {
     position: relative;
     display: inline-block;
     overflow: hidden;
-  }
+}
 
-  .img-gradient::after {
+.img-gradient::after {
     content: "";
     position: absolute;
     inset: 0;
     background: linear-gradient(to left, rgba(270, 270, 260, 1), transparent);
-    pointer-events: none; 
-  }
-  .nav-galeria{
+    pointer-events: none;
+}
+
+.nav-galeria {
     display: flex;
     justify-content: center;
     gap: 20px;
-  }
-  .nav-galeria a{
+}
+
+.nav-galeria a {
     color: var(--ui-color-danger, #E62121);
     text-align: right;
     font-family: Inter;
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
-    line-height: 160%; 
+    line-height: 160%;
     text-decoration: none;
-    margin-left: 226px;
-  }
-  .nav-galeria img{
+    margin-left: 418px;
+}
+
+.nav-galeria img {
     width: 49.5px;
     height: 14px;
     flex-shrink: 0;
     margin-top: 7px;
-  }
+}
+
+.ultimos-posts {
+    width: 100%;
+    margin: 40px auto;
+    font-family: Inter, sans-serif;
+}
+
+.ultimos-posts h2 {
+    margin-bottom: 16px;
+    color: var(--neutras-Gray, #8D9AA6);
+    font-family: Inter;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 160%;
+}
+
+.post {
+    border-bottom: 1px solid #dcd8d8;
+    padding: 20px 0;
+}
+
+.post h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.post p {
+    font-size: 0.9rem;
+    color: #8D9AA6;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.post a {
+    color: var(--neutras-Prata, #3C4B58);
+}
+.post img {
+    width: 28px;
+    height: auto;
+}
+
+.ver-todas {
+    display: block;
+    text-align: right;
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: var(--neutras-Prata, #2648A1);
+}
+.ultimos-posts img{
+    display: flex;
+    width: 32px;
+    height: 25px;
+    padding: 1px 4px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
