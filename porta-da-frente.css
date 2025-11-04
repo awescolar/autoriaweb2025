@@ -16,6 +16,7 @@ body {
     background: #fff;
     font-size: 16px;
     line-height: 1.6;
+    max-width: 100%;
 }
 
 /* CLASSES UTILITÁRIAS */
@@ -121,7 +122,6 @@ header ul {
 
 header li a {
     color: #fff;
-    text-decoration: none;
     font-weight: 500;
     letter-spacing: 0.5px;
 }
@@ -169,16 +169,17 @@ article h1 {
 .box {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     background-color: #EFF2F7;
     border-radius: 6px;
-    padding: 8px 12px;
+    padding: 6px 12px;
     margin-bottom: 20px;
 }
 
 .box p {
     font-size: 16px;
     color: #707C8C;
+    padding-top: 10px;
 }
 
 .box a {
@@ -212,7 +213,8 @@ article a {
 .categorias-principais {
     margin-top: 40px;
     padding-top: 20px;
-    border-top: 4px solid #ff0000;
+    border-top: 4px solid transparent;
+    border-image: linear-gradient(to right, red, rgb(255, 255, 255)) 0.5;
 }
 
 .categorias-principais h2 {
@@ -271,12 +273,48 @@ article a {
     
 }
 .midias h2{
-    display: flex;
+    display: inline-block;
     color:  #EB5151;
     font-family: Inter;
+    margin-right: 210px;
 }
 .galeria {
     display: flex;
     gap: 16px;
     justify-content: center;
 }
+.galeria a {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  .img-gradient::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to left, rgba(270, 270, 260, 1), transparent);
+    pointer-events: none; 
+  }
+  .nav-galeria{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .nav-galeria a{
+    color: var(--ui-color-danger, #E62121);
+    text-align: right;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 160%; 
+    text-decoration: none;
+    margin-left: 226px;
+  }
+  .nav-galeria img{
+    width: 49.5px;
+    height: 14px;
+    flex-shrink: 0;
+    margin-top: 7px;
+  }
