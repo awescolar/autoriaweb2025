@@ -1,16 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-.name{
-    color: #EB5151;
-}
 body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: "Inter", sans-serif;
   margin: 0;
   background: #fff;
   color: #333;
+  line-height: 1.6;
 }
 
-
+/* ===== HEADER ===== */
 header {
   background-color: #c8102e;
   color: white;
@@ -20,29 +18,28 @@ header {
   padding: 15px 40px;
 }
 
-.esquerda ul li{
-  list-style-type: none;
-  padding-right: 10px;
-  display: inline;
+header ul {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-
-header .esquerda p{
-  font-weight: 300;
-  font-size: 12em;
-  margin-left: 5px;
-}
-
-header .direita a{
+header a {
   color: white;
   text-decoration: none;
-  margin-left: 20px;
   font-weight: 500;
-  list-style: ;
 }
 
+header a:hover {
+  text-decoration: underline;
+}
+
+/* ===== MAIN ===== */
 main {
-  max-width: 700px;
+  max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
 }
@@ -53,10 +50,6 @@ h2 {
   color: #273644;
   margin-bottom: 10px;
 }
-.line{
-    display: flex;
-    padding-left: 42px;
-}
 
 .quote {
   color: #c8102e;
@@ -64,17 +57,25 @@ h2 {
   margin-right: 5px;
 }
 
+.line {
+  border-bottom: 2px solid #c8102e;
+}
+
+/* ===== AUTOR ===== */
 .author {
-  padding-left: 42px;
   background: #EFF2F7;
-  padding: auto 9px;
+  padding: 8px 15px;
   color: #666;
   font-size: 0.9em;
   margin-top: 0;
   margin-bottom: 20px;
 }
 
-.author .tag {
+.name {
+  color: #EB5151;
+}
+
+.tag {
   background: #EB5151;
   color: white;
   padding: 3px 8px;
@@ -82,18 +83,21 @@ h2 {
   font-size: 0.8em;
 }
 
+/* ===== CONTEÚDO PRINCIPAL ===== */
 .content {
   font-size: 1em;
   color: #707C8C;
   line-height: 1.6;
-  padding-left: 42px;
 }
 
 .continue {
-    padding-left: 42px;
   color: #EB5151;
   text-decoration: none;
   font-weight: 600;
+}
+
+.continue:hover {
+  text-decoration: underline;
 }
 
 hr {
@@ -102,15 +106,19 @@ hr {
   margin: 30px 0;
 }
 
+/* ===== CATEGORIAS ===== */
 .categories h3 {
   color: #999;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.1em;
+  margin-bottom: 10px;
 }
 
 .tags {
-  margin: 10px 0 15px 0;
-  padding-left: 42px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
 }
 
 .tags span {
@@ -119,7 +127,6 @@ hr {
   color: #c8102e;
   padding: 5px 10px;
   border-radius: 3px;
-  margin: 3px;
   font-size: 0.85em;
 }
 
@@ -127,10 +134,103 @@ hr {
   color: #888;
   font-size: 0.85em;
   text-decoration: none;
-  display: flex;
-  justify-content: end;
-  padding-left: 327px;
 }
-h3{
-    padding-left: 42px;
+
+.see-all:hover {
+  text-decoration: underline;
+}
+
+/* ===== GALERIA ===== */
+.galeria {
+  margin-top: 40px;
+}
+
+.galeria h3 {
+  color: #273644;
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.grid-midia {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.grid-midia img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* ===== ÚLTIMOS POSTS ===== */
+.latest-posts {
+  margin-top: 50px;
+  color: #273644;
+}
+
+.latest-posts h3 {
+  color: #999;
+  font-weight: 500;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.post {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.post h4 {
+  font-size: 1em;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+  color: #273644;
+}
+
+.meta {
+  color: #707C8C;
+  font-size: 0.85em;
+}
+
+.meta a {
+  color: #5070B8;
+  text-decoration: none;
+}
+
+.meta a:hover {
+  text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #f5f5f5;
+  text-align: center;
+  padding: 25px;
+  color: #666;
+  font-size: 0.9em;
+  margin-top: 60px;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .grid-midia {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  main {
+    padding: 0 15px;
+  }
 }
