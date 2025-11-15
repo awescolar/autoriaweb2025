@@ -1,0 +1,166 @@
+body {
+  background: #080808;
+}
+
+.flex {
+  display: flex;
+}
+
+/*HEADER*/  
+header nav {
+  background: #1B1B1B;
+  align-items: center;
+}
+
+header nav .menu-navegacao a {
+  color: #9C9C9C;
+  text-decoration: none;
+  margin: 2vi;
+}
+
+header nav .menu-social a {
+  color: #9C9C9C;
+  margin: 2vi;
+}
+
+nav ul li{
+    list-style: none;
+    color: #9c9c9c;
+    text-decoration: none;
+    flex-direction: row-reverse;
+}
+
+nav{
+    background-color: #1B1B1B;
+    
+}
+
+/*MAIN*/
+
+
+main .perfil h1 {
+  color: #FFFFFF;
+  font-family: "Raleway", sans-serif;
+  font-size: 3em;
+}
+main .perfil h3 {
+  color: #9C9C9C;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 2em;
+}
+
+main .perfil p {
+  color: #9C9C9C;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1vw;
+}
+main .perfil button {
+  color: #FFFFFF;
+  border: 1px solid #62BA1B;
+  background: #3F8E00;
+  border-radius: 2%;
+  box-shadow: 1px solid #FFFFFF;
+  padding: 1vh;
+}
+main .perfil button a {
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 1vi;
+  padding: 2vw;
+}
+
+/*FOOTER*/
+
+footer {
+  height: 20vh;
+  font-size: 1vi;
+}
+
+
+.lista-sem-estilo {
+  text-decoration: none;
+  padding: 0;
+  list-style: none;
+}
+
+.foto-com-borda {
+  height: 20vw;
+  width: 20vw;
+  padding: 0;
+  border-radius: 100%;
+}
+
+.foto-nav {
+  height: 1.5vw;
+  width: 1.5vw;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.display-flex, .container {
+  display: flex;
+}
+
+/*collor*/
+
+.cor-branca {
+  color: #FFFFFF;
+}
+
+/*espaçamento*/
+
+.gap-1 {
+  gap: 1vi;
+}
+
+.gap-2 {
+  gap: 2vi;
+}
+
+@media (max-width: 768px) {
+
+  img{
+    max-width: auto;
+    max-height: auto;
+  }
+
+  *{
+    max-width: auto;
+    max-height: auto;
+  }
+
+  main{
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box; 
+    flex-direction: column;
+  }
+
+  footer {
+    height: auto;
+    padding: 2vh;
+    flex-direction: row;
+  }
+
+  main .perfil h1 {
+    font-size: 2em;
+  }
+  
+  main .perfil h3 {
+    font-size: 1.5em;
+  }
+  
+  main .perfil p {
+    font-size: 3vw;
+  }
+  
+  .foto-com-borda {
+    height: 40vw;
+    width: 40vw;
+  }
+}
