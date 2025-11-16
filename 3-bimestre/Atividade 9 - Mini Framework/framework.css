@@ -1,57 +1,239 @@
-{box-sizing:border-box;margin:0;padding:0}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-img{max-width:100%;display:block}
-
-body{font-size:16px/1.6 system-ui, sans-serif; 
-    color:#374151; 
-    background:#f6f7f8;}
-
-.h1{font-size:2rem;
-    font-weight:800}
-
-.muted{color:#6b7280}
-
-.mt-2{margin-top:.5rem}
-
-.mt-4{margin-top:1rem}
-
-.mb-2{margin-bottom:.5rem}
-
-.mb-4{margin-bottom:1rem}
-
-.p-2{padding:.5rem}
-
-.p-3{padding:1rem}
-
-.text-center{text-align:center}
-
-.container{max-width:1100px;
-    margin-inline:auto;
-    padding-inline:1rem}
-
-.flex{display:flex}
-
-.items-center{align-items:center}
-
-.between{justify-content:space-between}
-
-.gap-2{gap:.5rem}
-
-.row{
-    display:flex;
-    flex-wrap:wrap;
-    gap:1rem
- }
-
- .col-12{flex:1 1 100%}
-
- .col-6{flex:1 1 100%} /* mobile */
-
-@media (min-width:768px){
-  .col-6{flex:1 1 calc(50% - 1rem)}
-  .hide-mobile{display:none}
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
 }
 
-@media (min-width:1024px){
-  .h1{font-size:2.5rem}
+header {
+  background-color: #C11616;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header ul p{
+  font-style: italic;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #273644;
+  margin-bottom: 28px;
+}
+
+
+.autor {
+  display: flex;
+  background: #EFF2F7;
+  padding: 0 0 0 15px;
+  color: #3C4B58;
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 28px;
+  align-items: center;
+}
+
+.nome {
+  color: #C11616;
+}
+
+.conteudo {
+  font-size: 21px;
+  color: #707C8C;
+  line-height: 160%;
+  font-weight: 400;
+}
+
+.continue{
+  display: flex;
+  align-items: center;
+}
+
+.continue figure{
+  padding-top: 8px;
+}
+
+.continue a {
+  font-style: italic;
+  text-decoration: none;
+  color: #273644;
+  font-weight: 300;
+}
+
+.categories div{
+  display: flex;   
+  gap: 18px;            
+  width: 100%;
+  padding:10px 0;  
+}
+
+
+.categories h3 {
+  color: #8D9AA6;
+  font-weight: 500;
+  font-size: 26px;
+  margin-bottom: 0;
+}
+
+.categories a {
+  display: flex;
+  color: #8D9AA6;
+  font-size: 16px;
+  justify-content: end;
+}
+
+.galeria {
+  margin-top: 40px;
+}
+
+.galeria-texto {
+  color: #C11616;
+  font-weight: 600;
+  font-size: 26px;
+  display: flex;
+  gap: 320px;
+}
+
+.mais{
+  display: flex;
+  gap: 440px;
+  justify-content: center;
+  
+}
+
+.link-galeria{
+  color: #C11616;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.imagens {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  color: #273644;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.imagens img {
+border-radius: 6px;
+}
+
+.ultimos-posts {
+  margin-top: 50px;
+  color: #273644;
+}
+
+.ultimos-posts h3 {
+  color: #8D9AA6;
+  font-weight: 500;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.post {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.post h4 {
+  font-size: 1em;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+  color: #273644;
+}
+
+.infos {
+  color: #8D9AA6;
+  font-size: 0.85em;
+}
+
+.infos a {
+  color: #3C4B58;
+}
+
+.ver-noticias{
+  display: flex;
+  color: #2648A1;
+  justify-content: end;
+}
+
+.section{
+  text-align: center;
+}
+
+.card{
+  display: flex;
+  gap: 14px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  color: #8D9AA6;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.card h2{
+  color: #273644;
+  margin: 0;
+  padding: 0;
+}
+
+.card div{
+  gap: 14px;
+
+}
+
+footer {
+  background: #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  color: #3C4B58;
+  font-size: 16px;
+  margin-top: 60px;
+}
+
+.logo-vermelha{
+  color: #C11616;
+}
+
+footer a{
+  color: #3C4B58;
 }
