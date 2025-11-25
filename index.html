@@ -1,63 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Atividade CSS - Aula</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
+<html lang="pt-BR">
 
-    <style>
-      body {
-        font-family: "Inter";
-        padding: 20px;
-        background: #eee;
-      }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simão Celerado: do nascimento à morte da democracia (VI)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="porta-da-frente.css">
+</head>
 
-      .card {
-        padding-left: 24px;
-        padding-right: 24px;
-        width: 624px;
-        background: #fff;
-        border-radius: 8px;
-      }
+<body>
+    <header>
+        <div class="container">
+            <div class="left">
+                <img src="img/Vector.png" alt="Logo do site">
+                <hr>
+                <em>por Sérgio Trindade</em>
+            </div>
 
-      .card-body {
-        border-left: 1px solid #eee;
-        border-right: 1px solid #eee;
-        padding-top: 24px;
-        padding-bottom: 24px;
-      }
-
-      .footer {
-        padding-left: 24px;
-        padding-right: 24px;
-      }
-
-      h3 {
-        font-size: 32px;
-        font-family: "Archivo";
-      }
-    </style>
-  </head>
-  <body>
-    <div class="card">
-      <div class="card-body">
-        <img src="img/bg.png" alt="" />
-
-        <div class="footer">
-          <h3>Guia para organização e fluxo de trabalho em UI Design</h3>
-          <img src="img/logo-figma.png" alt="" />
-          <p>
-            Dicas práticas e efetivas para ganhar em produtividade e organização
-            em projetos no Figma.
-          </p>
-          <img src="img/logo-boost.png" alt="" />
+            <div class="right">
+                <img src="img/Frame 12.png" alt="">
+                <ul>
+                    <li><a href="#">O BLOG</a></li>
+                    <hr>
+                    <li><a href="#">DOWNLOAD</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </div>
-  </body>
+    </header>
+
+    <main>
+        <article>
+            <div class="title-container">
+                <img src="img/“.png" alt="Aspas decorativas">
+                <h1>Simão celerado: do nascimento à morte da democracia (VI) - o caso Alan Gideon</h1>
+            </div>
+
+
+            <div class="box">
+                <p>
+                    <strong class="negrito">por</strong>
+                    <a href="#">Sérgio Trindade</a> — publicado em 16.out.2018
+                </p>
+                <img src="img/+10.png" alt="Ícone de compartilhamento">
+            </div>
+
+            <div class="row">
+                <p>
+                    Filho de Jacinto de Souza Rojão, um dos mais queridos funcionários da
+                    Escola Federal de Educação, Ciência, Filosofia e Tecnologia do Rio das Mortes (EFECFTRM),
+                    Alan Gideon assumiu vaga de concurso, como administrador...
+                </p>
+            </div>
+
+            <a href="#" class="continuar">Continue lendo</a>
+        </article>
+
+        <section class="categorias-principais">
+            <h2>Principais Categorias</h2>
+            <ul class="categorias">
+                <li data-numero="10"><a href="#">CONTOS E CRÔNICAS</a></li>
+                <li data-numero="10"><a href="#">CANGAÇO</a></li>
+                <li data-numero="99"><a href="#">BRASIL</a></li>
+                <li data-numero="23"><a href="#">ECONOMIA</a></li>
+                <li data-numero="54"><a href="#">HISTÓRIA DO BRASIL</a></li>
+            </ul>
+
+
+            <div class="ver-todas">
+                <br>
+                <a href="#">Ver todas as categorias</a>
+            </div>
+        </section>
+    </main>
+    <section class="midias">
+        <div class="titulos">
+            <h2><strong>Galeria de fotos</strong></h2>
+            <h2>& <strong>Vídeos</strong></h2>
+        </div>
+
+        <div class="galeria">
+            <a href="#">
+                <figure><img src="img/galeria-img-1.png" alt="">
+                    <figcaption>Carnaval de máscaras em Veneza consolida uma tradição histórica.</figcaption>
+                </figure>
+            </a>
+            <a href="#">
+                <figure><img src="img/galeria-img-2.png" alt="">
+                    <figcaption>As mascáras deram o tom em diversos carnavais pelo mundo.</figcaption>
+                </figure>
+            </a>
+            <a href="#" class="img-gradient">
+                <figure><img src="img/galeria-img-3.png" alt="">
+                    <figcaption>Em Olinda a alegria foi muita.</figcaption>
+                </figure>
+            </a>
+            <a href="#">
+                <figure><img src="img/galeria-video-1.png" alt="">
+                    <figcaption>No Rio são as máscaras que deram o tom nesse carnaval de pandemia. Os foliões assumiram
+                        suas máscaras.</figcaption>
+                </figure>
+            </a>
+            <a href="#">
+                <figure><img src="img/galeria-video-2.png" alt="">
+                    <figcaption>A seu modo, na China, o carnaval manteve a tradição</figcaption>
+                </figure>
+            </a>
+        </div>
+
+        <nav class="nav-galeria">
+            <a href="#">mais fotos</a>
+            <img src="img/Group 17.png" alt="">
+            <a href="#">mais vídeos</a>
+            <img src="img/Group 17.png" alt="">
+        </nav>
+    </section>
+
+    <main>
+        <section class="ultimos-posts">
+            <h2>Últimos posts</h2>
+
+            <article class="post">
+                <h3>Filho de Jacinto de Souza Rojão, um dos mais queridos funcionários da Escola Federal de
+                    Educação,
+                    Ciência, Filosofia e Tecnologia do Rio das Mortes</h3>
+                <p>Publicado em 26.out.2020 — em <a href="#">Crônicas e Contos</a> <img src="img/10+.png" alt="10+"
+                        class="img10+">
+                </p>
+            </article>
+
+            <article class="post">
+                <h3>Filho de Jacinto de Souza Rojão, um dos mais queridos funcionários da Escola Federal de
+                    Educação,
+                    Ciência, Filosofia e Tecnologia do Rio das Mortes</h3>
+                <p>Publicado em 26.out.2020 — em <a href="#">Crônicas e Contos</a> <img src="img/10+.png" alt="10+"
+                        class="img10+">
+                </p>
+            </article>
+
+            <article class="post">
+                <h3>Filho de Jacinto de Souza Rojão, um dos mais queridos funcionários da Escola Federal de
+                    Educação,
+                    Ciência, Filosofia e Tecnologia do Rio das Mortes</h3>
+                <p>Publicado em 26.out.2020 — em <a href="#">Crônicas e Contos</a> <img src="img/10+.png" alt="img10+">
+                </p>
+            </article>
+
+            <article class="post">
+                <h3>Filho de Jacinto de Souza Rojão, um dos mais queridos funcionários da Escola Federal de
+                    Educação,
+                    Ciência, Filosofia e Tecnologia do Rio das Mortes</h3>
+                <p>Publicado em 26.out.2020 — em <a href="#">Crônicas e Contos</a> <img src="img/10+.png" alt="10+"
+                        class="img10+">
+                </p>
+            </article>
+
+            <a href="#" class="ver-todas">Ver todas as notícias</a>
+        </section>
+    </main>
+    <section class="serie-de-posts">
+        <h2>SÉRIES DE POSTS</h2>
+        <h3>Você pode acompanhar as histórias que são publicadas em formato de coletâneas.</h3>
+
+        <div class="posts">
+            <div class="block">
+                <h4>Última publicação - <strong>21.jun.2021</strong></h4>
+                <h3>A Escola e a estupidez – como um falso, um atoleimado e uma gama de outras coisas fizeram da futrica
+                    método</h3>
+                <h4><a href="#">escola da estupidez</a> (10 publicações)</h4>
+            </div>
+            <div class="block">
+                <h4>Última publicação - <strong>21.jun.2021</strong></h4>
+                <h3>Entrevista com Luiz Alves de Melo</h3>
+                <h4><a href="#">nomeação </a> (2 publicações)</h4>
+            </div>
+            <div class="block">
+                <h4>Última publicação - <strong>21.ago.2021</strong></h4>
+                <h3>A tabelinha Almério-Amador</h3>
+                <h4><a href="#">consenso do bem</a> (10 publicações)</h4>
+            </div>
+            <div class="block">
+                <h4>Última publicação - <strong>21.ago.2021</strong></h4>
+                <h3>A zezoficação do Protagonista (ou Quando Zorba derramou lágrimas)</h3>
+                <h4><a href="#">consenso do bem</a> (10 publicações)</h4>
+            </div>
+        </div>
+        <nav><a href="#">Acessar todas as coletâneas</a>
+            <a href="#"><img src="img/Group 17.png" alt=""></a>
+        </nav>
+    </section>
+    <footer>
+        <div class="logo">
+            <div>
+                <img src="img/Vector2.png" alt="">
+                <em>por <a href=""><strong>Sérgio Trindade</strong></a></em>
+            </div>
+
+            <div class="links">
+                <a href="#"><u>O BLOG</u></a>
+                <a href="#">DOWNLOADS</a>
+                <a href="#">VÍDEOS</a>
+                <a href="#">FOTOS</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
 </html>
