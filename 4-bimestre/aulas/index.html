@@ -3,29 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semana 32</title>
+    <title>Java-Script</title>
+
+    <script>
+        // Entrada básica
+        let nome = "Gabriel";
+        console.log(nome);
+
+        nome = "Batman";
+        console.log(nome)
+
+        // Lista/Arrays
+        const nomes = ["Elis", "Layse", "Gabriel", "Allef", "Lucas", "Keity"];
+        const idades = [16,15,17,16,14,15];
+
+        for(let i = 0; i < 6; i ++){
+            console.log("Nome: " + nomes[i] + " - " + "Idade: " + idades[i]);
+        }
+
+        // Object/Dicionário
+        const aluno = {
+            nome    : "Gabriel",
+            idade   : 16,
+            aprovado: true
+        }
+
+        //Funções
+        function saudarPessoa(nome){
+            console.log("Olá " + nome + "!");
+        }
+
+
+        //Entrada Básica
+        saudarPessoa(nome);
+
+
+        //Dicionário
+        saudarPessoa(aluno.nome);
+
+
+        //Lista
+        saudarPessoa(nomes[0])
+        saudarPessoa(nomes[1])
+        saudarPessoa(nomes[2])
+        saudarPessoa(nomes[3])
+        saudarPessoa(nomes[4])
+        saudarPessoa(nomes[5])
+
+
+        //Somando valores
+        function somar(a, b){
+            return a + b;
+        }
+
+        let nota1 = somar(100, 43);
+
+        console.log("Nota: " + nota1);
+
+        //Subtrair valores
+        function subtrair(a, b){
+            return a - b;
+        }
+
+        //dividindo valores
+        function dividir(a, b){
+            return a / b;
+        }
+
+        //multiplicando valores
+        function multiplicar(a, b){
+            return a * b;
+        }
+
+        
+    </script>
 
 </head>
 <body>
-    
-    <h1 id="titulo">Olá, turma sem nome! </h1>
-
-    <script>
-        const titulo = document.getElementById("titulo");
-        console.log(titulo)
-        // acessar um id //
-    </script>
-
-    
-
-    <p class="texto"> paragrafo 1</p>
-    <p class="texto"> paragrafo 2</p>
-
-    <script>
-        const p = document.querySelector(".texto");
-        console.log(p);
-        // acessar classe // 
-    </script>
-
 </body>
 </html>
