@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Média</title>
+    <script>
+
+    let nota1 = 8;
+    let nota2 = 7;
+    let nota3 = 9;
+    let nota4 = 6;
+
+    function somarNotas(n1, n2, n3, n4) {
+        return n1 + n2 + n3 + n4;
+    }
+
+    function calcularMedia(total, quantidade) {
+        return total / quantidade;
+    }
+
+    let totalNotas = somarNotas(nota1, nota2, nota3, nota4);
+    let media = calcularMedia(totalNotas, 4);
+
+    console.log("===============================================================");
+    console.log("                   CALCULADORA DE MÉDIA");
+    console.log("===============================================================");
+    
+    console.log("Notas informadas:");
+    console.log("N1:", nota1, " | N2:", nota2, " | N3:", nota3, " | N4:", nota4);
+    
+    console.log("---------------------------------------------------------------");
+    console.log("Soma das notas: " + totalNotas);
+    console.log("Média final: " + media.toFixed(2));
+    
+    console.log("---------------------------------------------------------------");
+    console.log("Obrigado por usar a calculadora!");
+    console.log("===============================================================");
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>
