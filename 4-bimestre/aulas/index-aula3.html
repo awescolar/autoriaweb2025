@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula-3</title>
+</head>
+<body>
+    <h1 id="titulo">ABC maior do RN</h1>
+    <button id="btn">CORRIGIR</button> <br> <br>
+
+    <script>  // Muda o texto escrito //
+        const btn = document.querySelector("#btn");
+        const h1 = document.querySelector("#titulo");
+
+        btn.onclick = function() {
+            h1.innerText = "ABC menor do RN";
+        };
+    </script>
+    
+
+    <input type="text" id="texto" placeholder="digite seu nome:"> <br> <br>
+    <button id="botao"> Clique para adicionar seu nome</button>
+
+    <script> // dentro do input // 
+        const botao = document.querySelector("#botao");
+        const texto = document.querySelector("#texto");
+
+        botao.onclick = function() {
+            valor = "olá gabriel"
+            texto.value = valor
+        }
+    </script>
+</body>
+</html>

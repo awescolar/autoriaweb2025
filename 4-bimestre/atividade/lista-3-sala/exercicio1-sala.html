@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio-1</title>
+</head>
+<body>
+    <h1>Formulário digital</h1>
+    <input type="text" id="nome" placeholder="Digite seu nome:"> <br> <br>
+    <input type="text" id="profissao" placeholder="Digite sua profissao:"> <br> <br>
+    <input type="url"  id="foto"  placeholder="Coloque sua foto:"> <br> <br>
+    <button id="btn"> Gerar Card</button> <br><br>
+
+    <div id="Card">
+        <img id="avatar" src="https://cdn.pixabay.com/photo/2016/04/01/10/11/avatar-1299805_1280.png" width="200"  alt="">
+
+        <h3 id="nomeCard">Seu nome:</h3>
+        <p id="profissaoCard">Sua profissão:</p>
+    </div>
+
+    <script>
+        const inputNome = document.getElementById("nome");
+        const inputProfissao = document.getElementById("profissao");
+        const inputFoto = document.getElementById("foto");
+        const nomeCard = document.getElementById("nomeCard");
+        const profissaoCard = document.getElementById("profissaoCard");
+        const avatar = document.getElementById("avatar");
+        const botao = document.getElementById("btn");
+
+        botao.onclick = function() {
+            const nome = inputNome.value;
+            const profissao = inputProfissao.value;
+            const foto = inputFoto.value;
+            if (nome === "") {
+                alert("Digite seu nome!");
+            } else {
+                nomeCard.innerText = nome;
+                profissaoCard.innerText = profissao;
+                avatar.src = foto;
+            }
+
+        }
+    </script>
+
+</body>
+</html>
