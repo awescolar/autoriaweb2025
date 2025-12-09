@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio-2</title>
+</head>
+<body>
+    <img id="lampada" src="img/lampada acesa.png" width="300" alt="lampada-acesa">
+    <button id="interruptor">Desligar</button>
+
+    <script>
+        let lampada_ligada = true;
+        const lampada = document.getElementById("lampada");
+        const btn = document.getElementById("interruptor");
+
+        btn.onclick = function () {
+
+            if (lampada_ligada === true) {
+                lampada.src = "img/lampada apagada.png";
+                btn.textContent = "Ligar";
+                lampada_ligada = false;
+
+            } else {
+                lampada.src = "img/lampada acesa.png"
+                btn.textContent = "Desligar";
+                lampada_ligada = true;
+            }
+        }
+    </script>
+</body>
+</html>
