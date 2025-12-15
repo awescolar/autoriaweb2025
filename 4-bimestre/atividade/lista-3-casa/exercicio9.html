@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>exercicio-9</title>
+
+</head>
+<body>
+
+  <h1>Banner Rotativo</h1>
+
+  <div id="banner"></div>
+
+  <button id="botao">Próximo</button>
+
+  <script>
+    const banners = [
+      {
+        titulo: "Banner 1",
+        texto: "Este é o primeiro banner.",
+        img: "  https://pbs.twimg.com/media/G8GIQMPW4AY8uwj.jpg"
+      },
+      {
+        titulo: "Banner 2",
+        texto: "Conteúdo do segundo banner.",
+        img: "https://sismf.museudofutebol.org/anexos/imagem/475622/w:640/h:640/c:0"
+      },
+      {
+        titulo: "Banner 3",
+        texto: "Aqui temos o terceiro banner.",
+        img: "https://upload.wikimedia.org/wikipedia/commons/8/87/Escudo_Vasco_1903.png"
+      },
+      {
+        titulo: "Banner 4",
+        texto: "Último banner da rotação.",
+        img: "https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2025/10/20/947386220-54667502520e3dfe58cdbceasy-resizecom.jpg"
+      }
+    ];
+
+    let indice = 0;
+    botao.onclick = function () {
+        indice = (indice + 1) % banners.length;
+        `<h2>${banners[indice].titulo}</h2>
+        <p>${banners[indice].texto}</p>
+        <img src="${banners[indice].img}">`;}
+  </script>
+
+</body>
+</html>

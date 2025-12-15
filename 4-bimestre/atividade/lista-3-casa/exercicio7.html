@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>exercicio-7</title>
+</head>
+<body>
+
+    <form>
+        <input type="text" id="nome" placeholder="Nome"><br><br>
+        <input type="email" id="email" placeholder="Email"><br><br>
+        <input type="tel" id="telefone" placeholder="Telefone"><br><br>
+        <textarea id="mensagem" placeholder="Mensagem"></textarea>
+    </form>
+
+    <script>
+        const nome = document.querySelector("#nome");
+        const email = document.querySelector("#email");
+        const telefone = document.querySelector("#telefone");
+        const mensagem = document.querySelector("#mensagem");
+
+        nome.value = "João Gabriel";
+        email.value = "fernandes.soares1@gmail.com";
+        telefone.value = "(84) 99632-2112";
+        mensagem.value = "Bom final de ano!";
+    </script>
+
+</body>
+</html>

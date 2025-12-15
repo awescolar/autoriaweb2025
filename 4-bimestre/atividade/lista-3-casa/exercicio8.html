@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercicio-8</title>
+</head>
+<body>
+
+  <h1>Galeria de Imagens Dinâmica</h1>
+
+
+  <div id="galeria"></div>
+
+  <script>
+
+    const imagens = [
+      "https://via.placeholder.com/150/FF0000",
+      "https://via.placeholder.com/150/00FF00",
+      "https://via.placeholder.com/150/0000FF",
+      "https://via.placeholder.com/150/FFFF00",
+      "https://via.placeholder.com/150/FF00FF",
+      "https://via.placeholder.com/150/00FFFF"
+    ];
+
+    const galeria = document.getElementById("galeria");
+
+    let html = "";
+
+    for (let i = 0; i < imagens.length; i++) {
+      html += `<img src="${imagens[i]}" alt="Foto ${i + 1}">`;
+    }
+    
+    galeria.innerHTML = html;
+  </script>
+
+</body>
+</html>

@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio-1</title>
     <style>
-        .dark{
-            background: #1a1a1a;
+        .alerta{
+            background: red;
             color: #ffffff;
         }
     </style>
 </head>
 <body>
-    <h1>Vasco será campeão da Copa do Brasil</h1>
-    <button id="btndark">Dark mode</button>
+    <h1 id="texto">Alerta!</h1>
+    <button id="btn">Alertar!</button>
     <script>
-        const btndark = document.getElementById("btndark");
+        const btndark = document.getElementById("btn");
         btndark.onclick = function() {
-            document.body.classList.toggle("dark");
+            document.body.classList.toggle("alerta");
         }
     </script>
 </body>

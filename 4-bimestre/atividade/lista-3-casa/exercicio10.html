@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>exercicio-10</title>
+  <style>
+  </style>
+</head>
+<body>
+
+  <h1>Editor de Perfil</h1>
+
+  <div class="perfil">
+    <img id="foto" width="300" src="https://img.freepik.com/vetores-gratis/circulo-azul-com-usuario-branco_78370-4707.jpg?semt=ais_hybrid&w=740&q=80">
+    <h2 id="nome">Seu Nome</h2>
+    <p id="bio">Sua bio aparecerá aqui.</p>
+    <a id="site" href="#" target="_blank">Seu site</a>
+  </div>
+
+  <form id="formPerfil">
+
+    <input type="text" id="inputFoto" placeholder="URL da foto">
+    <input type="text" id="inputNome" placeholder="Nome">
+    <textarea id="inputBio" placeholder="Bio"></textarea>
+    <input type="text" id="inputSite" placeholder="URL do site">
+    <button type="button" id="atualizar">Atualizar Perfil</button>
+  </form>
+
+  <script>
+    const foto = document.getElementById("foto");
+    const nome = document.getElementById("nome");
+    const bio = document.getElementById("bio");
+    const site = document.getElementById("site");
+
+    const inputFoto = document.getElementById("inputFoto");
+    const inputNome = document.getElementById("inputNome");
+    const inputBio = document.getElementById("inputBio");
+    const inputSite = document.getElementById("inputSite");
+
+    const botao = document.getElementById("atualizar");
+
+    botao.onclick = function () {
+      foto.src = inputFoto.value;
+      nome.innerText = inputNome.value;
+      bio.innerText = inputBio.value;
+      site.href = inputSite.value;
+      site.innerText = inputSite.value;
+
+      inputFoto.value = "";
+      inputNome.value = "";
+      inputBio.value = "";
+      inputSite.value = "";
+    };
+  </script>
+
+</body>
+</html>
