@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio-1</title>
+    <style>
+        .dark{
+            background: #1a1a1a;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <button id="btndark">Dark mode</button>
+    <script>
+        const btndark = document.getElementById("btndark");
+        btndark.onclick = function() {
+            document.body.classList.toggle("dark");
+        }
+    </script>
+</body>
+</html>

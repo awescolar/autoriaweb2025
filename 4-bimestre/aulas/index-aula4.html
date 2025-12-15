@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula-4 - Manipulação de Classes e Estilos</title>
+
+    <style>
+        :root{
+            --cor-vasco: blue;
+            --cor-vasco_da_gama: red;
+            --cor-crvg: black;
+        }
+
+        .vasco {color: var(--cor-vasco);}
+        .vasco_da_gama {color: var(--cor-vasco_da_gama)}
+        .crvg {color: var(--cor-crvg);}
+        .flex{display: flex;padding: 0;list-style: none;}
+    </style>
+</head>
+<body>
+
+    <h1 id="melhor-time">Melhor Time: Vasco da Gama</h1>
+    <ul class="flex">
+        <li><button id="btnVasco">Vasco</button></li>
+        <li><button id="btnCRVG">CRVG</button></li>
+        <li><button id="btnVascodagama">Vasco da Gama</button></li>
+    </ul>
+
+    <script>
+        let time = document.getElementById("melhor-time");
+        let btnVasco = document.getElementById("btnVasco");
+        let btnCRVG = document.getElementById("btnCRVG");
+        let btnVascodagama = document.getElementById("btnVascodagama");
+
+        btnVasco.onclick = function(){
+            time.classList.remove("vasco_da_gama");
+            time.classList.remove("crvg");
+            time.classList.add("vasco");
+        }
+        btnVascodagama.onclick = function(){
+            time.classList.remove("vasco");
+            time.classList.remove("crvg");
+            time.classList.add("vasco_da_gama");
+        }
+        btnCRVG.onclick = function(){
+            time.classList.remove("vasco_da_gama");
+            time.classList.remove("vasco");
+            time.classList.add("crvg");
+        }
+    </script>
+    
+</body>
+</html>
