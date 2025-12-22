@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <ul id="frutas"></ul>
+    <script>
+        let frutas = ["Maçã", "Uva", "Cajá", "Melancia", "Pêra"];
+        let feira = document.getElementById("frutas");
+        let li = "";
+
+        for (let fruta of frutas) {
+            li = li + "<li>"+fruta+"</li>";
+        }
+
+        feira.innerHTML = li;
+    </script>
+</body>
+</html>
